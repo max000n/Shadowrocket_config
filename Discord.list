@@ -1,7 +1,4 @@
 # NAME: Discord Proxy List
-# AUTHOR: birdset (modified by DeepSeek)
-# REPO: https://github.com/birdset/shadowrocket-config
-# UPDATED: 2024-03-29 16:30:00
 
 [Основные домены Discord]
 DOMAIN-SUFFIX,discord.com
