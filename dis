@@ -1,0 +1,40 @@
+# NAME: Discord Proxy List  
+# AUTHOR: birdset  
+# REPO: https://github.com/birdset/shadowrocket-config  
+# UPDATED: 2024-08-14 10:02:00  
+
+# Discord Domains  
+DOMAIN-SUFFIX,discord.com  
+DOMAIN-SUFFIX,discord.co  
+DOMAIN-SUFFIX,discord.gg  
+DOMAIN-SUFFIX,discord.gift  
+DOMAIN-SUFFIX,discord.gifts  
+DOMAIN-SUFFIX,discord.media  
+DOMAIN-SUFFIX,discord.new  
+DOMAIN-SUFFIX,discord.store  
+DOMAIN-SUFFIX,discord.tools  
+DOMAIN-SUFFIX,discord.design  
+DOMAIN-SUFFIX,discord.dev  
+DOMAIN-SUFFIX,discordactivities.com  
+DOMAIN-SUFFIX,discordpartygames.com  
+DOMAIN-SUFFIX,discordsays.com  
+DOMAIN-SUFFIX,discordsez.com  
+DOMAIN-SUFFIX,discordstatus.com  
+DOMAIN-SUFFIX,discordmerch.com  
+
+# Discord CDN & Subdomains  
+DOMAIN-SUFFIX,discordapp.com  
+DOMAIN-SUFFIX,discordapp.net  
+DOMAIN-SUFFIX,discordcdn.com  
+DOMAIN-SUFFIX,dis.gd  
+DOMAIN,canary.discord.com  
+DOMAIN,ptb.discord.com  
+DOMAIN,media.discordapp.net  
+DOMAIN,images-ext-1.discordapp.net  
+DOMAIN,images-ext-2.discordapp.net  
+DOMAIN,stable.dl2.discordapp.net  
+DOMAIN,cdn.discordapp.com  
+DOMAIN,discord-attachments-uploads-prd.storage.googleapis.com  
+
+# Catch-all Discord Keywords  
+DOMAIN-KEYWORD,discord
