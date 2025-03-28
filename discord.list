@@ -1,35 +1,64 @@
-# 🛡️ ABSOLUTE DISCORD PROXY COVERAGE 🛡️
-# 🔥 100% гарантия перехвата всех адресов (включая голосовые серверы)
+# NAME: Discord Proxy List
 
-[⚡ ЯДРО DISCORD]
-DOMAIN-SUFFIX,discord.com,PROXY
-DOMAIN-SUFFIX,discord.gg,PROXY
-DOMAIN-SUFFIX,discordapp.com,PROXY
+[Основные домены Discord]
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discordstatus.com
+DOMAIN-SUFFIX,discord.gift
+DOMAIN-SUFFIX,discord.media
 
-[🌐 ВСЕ ВОЗМОЖНЫЕ IP-ДИАПАЗОНЫ]
-# 1. Официальные диапазоны Discord
-IP-CIDR,162.159.0.0/16,PROXY
+[API и CDN сервисы]
+DOMAIN,api.discord.co
+DOMAIN,cdn.discordapp.com
+DOMAIN,media.discordapp.net
+DOMAIN,status.discord.com
+DOMAIN,gateway.discord.gg
 
-# 2. Весь Google Cloud (где размещаются голосовые серверы)
-IP-CIDR,35.0.0.0/8,PROXY
-IP-CIDR,34.0.0.0/15,PROXY
+[Голосовые сервисы Discord]
+DOMAIN-SUFFIX,discord.voice
+DOMAIN-SUFFIX,discordrtc.com
+DOMAIN-SUFFIX,voice.discord.com
+DOMAIN-SUFFIX,voice.discordapp.com
+DOMAIN,voice.discord.gg
+DOMAIN,voice-webui.discord.gg
+DOMAIN,voice-us-east-1.discord.gg
+DOMAIN,voice-us-west-1.discord.gg
+DOMAIN,voice-eu-central-1.discord.gg
+DOMAIN,voice-eu-west-1.discord.gg
+DOMAIN,voice-ap-south-1.discord.gg
+DOMAIN,voice-singapore.discord.gg
+DOMAIN,voice-sydney.discord.gg
 
-# 3. Резервные облачные провайдеры
-IP-CIDR,104.16.0.0/13,PROXY  # Cloudflare
-IP-CIDR,140.91.0.0/16,PROXY   # Oracle Cloud
+[WebRTC и медиа серверы]
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.io
+DOMAIN-SUFFIX,discord.co
+DOMAIN-SUFFIX,discord.services
+DOMAIN-SUFFIX,discord.new
 
-[🔌 ОБЯЗАТЕЛЬНЫЕ ПОРТЫ]
-UDP,50000-65535,PROXY
+[IP-адреса Discord IPv4]
+IP-CIDR,162.159.128.0/22
+IP-CIDR,162.159.132.0/22
+IP-CIDR,162.159.136.0/22
+IP-CIDR,162.159.192.0/22
+IP-CIDR,162.159.208.0/22
+IP-CIDR,162.159.212.0/22
+IP-CIDR,162.159.216.0/22
+# Добавьте дополнительные диапазоны IPv4 после анализа трафика (например, IP-CIDR,203.0.113.0/24)
 
-[🚀 АВТОМАТИЗАЦИЯ]
-rule-providers:
-  discord-ips:
-    type: http
-    url: "https://discord.com/api/v9/ips"
-    interval: 300
-    behavior: ipcidr
+[IP-адреса Discord IPv6]
+IP-CIDR6,2620:119:2::/48
+IP-CIDR6,2620:119:35::/48
+IP-CIDR6,2620:119:36::/48
+# Добавьте дополнительные диапазоны IPv6 после анализа трафика (например, IP-CIDR6,2001:db8::/48)
 
-[🛠️ ЭКСТРЕННЫЕ МЕРЫ]
-# Если ничего не работает:
-DOMAIN-KEYWORD,discord,PROXY
-USER-AGENT,Discord*,PROXY
+[Ключевые слова]
+DOMAIN-KEYWORD,discord
+DOMAIN-KEYWORD,discordapp
+DOMAIN-KEYWORD,discord-voice
+
+[User-Agent]
+USER-AGENT,Discord*
+USER-AGENT,Discordbot*
