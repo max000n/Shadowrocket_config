@@ -1,75 +1,77 @@
 # NAME: Discord Proxy List
 
-[Основные домены Discord]
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
-DOMAIN-SUFFIX,discordstatus.com
-DOMAIN-SUFFIX,discord.gift
-DOMAIN-SUFFIX,discord.media
-
-[API и CDN сервисы]
-DOMAIN,api.discord.co
-DOMAIN,cdn.discordapp.com
-DOMAIN,media.discordapp.net
-DOMAIN,status.discord.com
-DOMAIN,gateway.discord.gg
-
-[Голосовые сервисы Discord]
-DOMAIN-SUFFIX,discord.voice
-DOMAIN-SUFFIX,discordrtc.com
-DOMAIN-SUFFIX,voice.discord.com
-DOMAIN-SUFFIX,voice.discordapp.com
-DOMAIN,voice.discord.gg
-DOMAIN,voice-webui.discord.gg
-DOMAIN,voice-us-east-1.discord.gg
-DOMAIN,voice-us-west-1.discord.gg
-DOMAIN,voice-eu-central-1.discord.gg
-DOMAIN,voice-eu-west-1.discord.gg
-DOMAIN,voice-ap-south-1.discord.gg
-DOMAIN,voice-singapore.discord.gg
-DOMAIN,voice-sydney.discord.gg
-
-[WebRTC и медиа серверы]
-DOMAIN-SUFFIX,discord.media
-DOMAIN-SUFFIX,discordapp.io
-DOMAIN-SUFFIX,discord.co
-DOMAIN-SUFFIX,discord.services
-DOMAIN-SUFFIX,discord.new
+# Явное правило для проблемного IP (чтобы точно шёл через прокси)
+IP-CIDR,35.217.3.205/32,PROXY
 
 [IP-адреса Discord IPv4]
-# Оригинальные диапазоны (вероятно, Cloudflare)
-IP-CIDR,162.159.128.0/22
-IP-CIDR,162.159.132.0/22
-IP-CIDR,162.159.136.0/22
-IP-CIDR,162.159.192.0/22
-IP-CIDR,162.159.208.0/22
-IP-CIDR,162.159.212.0/22
-IP-CIDR,162.159.216.0/22
-# Добавлен ваш конкретный IP
-IP-CIDR,35.217.60.234/32
-# Расширенные диапазоны Google Cloud (на основе 35.217.x.x)
-IP-CIDR,35.217.0.0/16    # Более широкий диапазон для голосовых серверов в GCP
-IP-CIDR,35.218.0.0/16    # Дополнительный диапазон GCP
-IP-CIDR,35.219.0.0/16    # Дополнительный диапазон GCP
-# Другие известные диапазоны Discord (возможные серверы)
-IP-CIDR,104.16.0.0/16    # Cloudflare, часто используется Discord
-IP-CIDR,104.17.0.0/16    # Cloudflare, часто используется Discord
+# Сначала обрабатываем IP-диапазоны, чтобы они имели приоритет
+IP-CIDR,162.159.128.0/22,PROXY
+IP-CIDR,162.159.132.0/22,PROXY
+IP-CIDR,162.159.136.0/22,PROXY
+IP-CIDR,162.159.192.0/22,PROXY
+IP-CIDR,162.159.208.0/22,PROXY
+IP-CIDR,162.159.212.0/22,PROXY
+IP-CIDR,162.159.216.0/22,PROXY
+IP-CIDR,35.217.60.234/32,PROXY
+IP-CIDR,35.217.0.0/16,PROXY    # Включает 35.217.3.205
+IP-CIDR,35.218.0.0/16,PROXY
+IP-CIDR,35.219.0.0/16,PROXY
+IP-CIDR,104.16.0.0/16,PROXY
+IP-CIDR,104.17.0.0/16,PROXY
 
 [IP-адреса Discord IPv6]
-IP-CIDR6,2620:119:2::/48
-IP-CIDR6,2620:119:35::/48
-IP-CIDR6,2620:119:36::/48
-# Добавлены примерные IPv6 диапазоны Google Cloud (если Discord их использует)
-IP-CIDR6,2600:1900::/28  # GCP IPv6, возможный голосовой трафик
-IP-CIDR6,2600:1901::/32  # GCP IPv6, дополнительный диапазон
+IP-CIDR6,2620:119:2::/48,PROXY
+IP-CIDR6,2620:119:35::/48,PROXY
+IP-CIDR6,2620:119:36::/48,PROXY
+IP-CIDR6,2600:1900::/28,PROXY
+IP-CIDR6,2600:1901::/32,PROXY
+
+[Основные домены Discord]
+DOMAIN-SUFFIX,discord.com,PROXY
+DOMAIN-SUFFIX,discord.gg,PROXY
+DOMAIN-SUFFIX,discordapp.com,PROXY
+DOMAIN-SUFFIX,discordapp.net,PROXY
+DOMAIN-SUFFIX,discordstatus.com,PROXY
+DOMAIN-SUFFIX,discord.gift,PROXY
+DOMAIN-SUFFIX,discord.media,PROXY
+
+[API и CDN сервисы]
+DOMAIN,api.discord.co,PROXY
+DOMAIN,cdn.discordapp.com,PROXY
+DOMAIN,media.discordapp.net,PROXY
+DOMAIN,status.discord.com,PROXY
+DOMAIN,gateway.discord.gg,PROXY
+
+[Голосовые сервисы Discord]
+DOMAIN-SUFFIX,discord.voice,PROXY
+DOMAIN-SUFFIX,discordrtc.com,PROXY
+DOMAIN-SUFFIX,voice.discord.com,PROXY
+DOMAIN-SUFFIX,voice.discordapp.com,PROXY
+DOMAIN,voice.discord.gg,PROXY
+DOMAIN,voice-webui.discord.gg,PROXY
+DOMAIN,voice-us-east-1.discord.gg,PROXY
+DOMAIN,voice-us-west-1.discord.gg,PROXY
+DOMAIN,voice-eu-central-1.discord.gg,PROXY
+DOMAIN,voice-eu-west-1.discord.gg,PROXY
+DOMAIN,voice-ap-south-1.discord.gg,PROXY
+DOMAIN,voice-singapore.discord.gg,PROXY
+DOMAIN,voice-sydney.discord.gg,PROXY
+
+[WebRTC и медиа серверы]
+DOMAIN-SUFFIX,discord.media,PROXY
+DOMAIN-SUFFIX,discordapp.io,PROXY
+DOMAIN-SUFFIX,discord.co,PROXY
+DOMAIN-SUFFIX,discord.services,PROXY
+DOMAIN-SUFFIX,discord.new,PROXY
 
 [Ключевые слова]
-DOMAIN-KEYWORD,discord
-DOMAIN-KEYWORD,discordapp
-DOMAIN-KEYWORD,discord-voice
+DOMAIN-KEYWORD,discord,PROXY
+DOMAIN-KEYWORD,discordapp,PROXY
+DOMAIN-KEYWORD,discord-voice,PROXY
 
 [User-Agent]
-USER-AGENT,Discord*
-USER-AGENT,Discordbot*
+USER-AGENT,Discord*,PROXY
+USER-AGENT,Discordbot*,PROXY
+
+# Если ничего выше не сработало, остальной трафик идёт напрямую (убедитесь, что это в самом конце)
+FINAL,DIRECT
