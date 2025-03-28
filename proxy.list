@@ -1,7 +1,5 @@
 # NAME: Proxy list
-# AUTHOR: birdset
-# REPO: https://github.com/birdset/shadowrocket-config
-# UPDATED: 2024-08-14 10:02:00
+
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aol.com
