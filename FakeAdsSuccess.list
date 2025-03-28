@@ -1,0 +1,23 @@
+# Shadowrocket Rule-Set: Fake Ads Success (для игр)
+
+[Rule]
+# Блокировка + подмена ответа на 200 (успех)
+DOMAIN-SUFFIX,unity3d.com,REJECT-RULE
+DOMAIN-SUFFIX,unityads.unity3d.com,REJECT-RULE
+DOMAIN-SUFFIX,applovin.com,REJECT-RULE
+DOMAIN-SUFFIX,googleadservices.com,REJECT-RULE
+DOMAIN-SUFFIX,doubleclick.net,REJECT-RULE
+DOMAIN-SUFFIX,ironsrc.com,REJECT-RULE
+DOMAIN-SUFFIX,facebook.com,REJECT-RULE
+DOMAIN-SUFFIX,fbcdn.net,REJECT-RULE
+
+# Подмена ответов рекламных запросов на 200 OK
+URL-REGEX,^https?://.*\.(unity3d|applovin|googleadservices|doubleclick|ironsrc|facebook)\.com/.*,REJECT-DICT
+
+# Перенаправление на 0.0.0.0 (дополнительная блокировка)
+MAP,unityads.unity3d.com,0.0.0.0
+MAP,googleads.g.doubleclick.net,0.0.0.0
+MAP,applovin.com,0.0.0.0
+
+# Финал: если правила не сработали, пропускаем трафик
+FINAL,DIRECT
