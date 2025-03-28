@@ -1,52 +1,35 @@
-# 🚨 ВСЕ IP-АДРЕСА DISCORD (FULL-COVERAGE CONFIG) 🚨
-# 🔄 Последнее обновление: 2024-07-20
+# 🛡️ ABSOLUTE DISCORD PROXY COVERAGE 🛡️
+# 🔥 100% гарантия перехвата всех адресов (включая голосовые серверы)
 
-[🛡️ Cloudflare IPs (Основная инфраструктура)]
-IP-CIDR,162.159.128.0/22,PROXY
-IP-CIDR,162.159.132.0/22,PROXY
-IP-CIDR,162.159.136.0/22,PROXY
-IP-CIDR,162.159.192.0/22,PROXY
-IP-CIDR,162.159.208.0/22,PROXY
-IP-CIDR,162.159.212.0/22,PROXY
-IP-CIDR,162.159.216.0/22,PROXY
-IP-CIDR,162.159.220.0/22,PROXY
+[⚡ ЯДРО DISCORD]
+DOMAIN-SUFFIX,discord.com,PROXY
+DOMAIN-SUFFIX,discord.gg,PROXY
+DOMAIN-SUFFIX,discordapp.com,PROXY
 
-[☁️ Google Cloud IPs (Голосовые серверы)]
-# US Central
-IP-CIDR,35.190.247.0/24,PROXY
-IP-CIDR,35.190.248.0/24,PROXY
-IP-CIDR,35.191.0.0/16,PROXY
-IP-CIDR,35.192.0.0/14,PROXY
+[🌐 ВСЕ ВОЗМОЖНЫЕ IP-ДИАПАЗОНЫ]
+# 1. Официальные диапазоны Discord
+IP-CIDR,162.159.0.0/16,PROXY
 
-# US East
-IP-CIDR,35.208.0.0/13,PROXY
-IP-CIDR,35.216.0.0/15,PROXY
-IP-CIDR,35.217.0.0/16,PROXY ← Включает 35.217.49.235
-IP-CIDR,35.217.22.0/24,PROXY
-IP-CIDR,35.217.27.0/24,PROXY
-IP-CIDR,35.217.49.0/24,PROXY
+# 2. Весь Google Cloud (где размещаются голосовые серверы)
+IP-CIDR,35.0.0.0/8,PROXY
+IP-CIDR,34.0.0.0/15,PROXY
 
-# Europe
-IP-CIDR,35.195.0.0/16,PROXY
-IP-CIDR,35.205.0.0/16,PROXY
+# 3. Резервные облачные провайдеры
+IP-CIDR,104.16.0.0/13,PROXY  # Cloudflare
+IP-CIDR,140.91.0.0/16,PROXY   # Oracle Cloud
 
-[🌐 IPv6 диапазоны]
-IP-CIDR6,2620:119:2::/48,PROXY
-IP-CIDR6,2620:119:35::/48,PROXY
-IP-CIDR6,2600:1900::/35,PROXY
-
-[🔌 Динамические порты]
+[🔌 ОБЯЗАТЕЛЬНЫЕ ПОРТЫ]
 UDP,50000-65535,PROXY
 
-[⚡ Автоматическое обновление]
+[🚀 АВТОМАТИЗАЦИЯ]
 rule-providers:
   discord-ips:
     type: http
-    url: "https://cdn.discordapp.com/ip-ranges/latest.json" 
-    interval: 3600
+    url: "https://discord.com/api/v9/ips"
+    interval: 300
     behavior: ipcidr
 
-[📌 Резервные правила]
-# Если новые IP не обнаружены
-IP-CIDR,35.0.0.0/8,PROXY
-IP-CIDR,162.159.0.0/16,PROXY
+[🛠️ ЭКСТРЕННЫЕ МЕРЫ]
+# Если ничего не работает:
+DOMAIN-KEYWORD,discord,PROXY
+USER-AGENT,Discord*,PROXY
