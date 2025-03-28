@@ -1,79 +1,88 @@
-# Discord Proxy List (Updated)
+# 🎮 Discord Proxy List (Ultimate 2024 Edition) 🎮
 
-[Основные домены Discord]
-⚪️ DOMAIN-SUFFIX,discord.com
-⚪️ DOMAIN-SUFFIX,discord.gg
-⚪️ DOMAIN-SUFFIX,discordapp.com
-⚪️ DOMAIN-SUFFIX,discordapp.net
-⚪️ DOMAIN-SUFFIX,discordstatus.com
-⚪️ DOMAIN-SUFFIX,discord.gift
-⚪️ DOMAIN-SUFFIX,discord.media
+[🔵 Основные домены Discord]
+🔷 DOMAIN-SUFFIX,discord.com
+🔷 DOMAIN-SUFFIX,discord.gg
+🔷 DOMAIN-SUFFIX,discordapp.com
+🔷 DOMAIN-SUFFIX,discordapp.net
+🔷 DOMAIN-SUFFIX,discordstatus.com
+🔷 DOMAIN-SUFFIX,discord.gift
+🔷 DOMAIN-SUFFIX,discord.media
+✨ NEW: 🟩 DOMAIN-SUFFIX,discord.dev
 
-[API и CDN сервисы]
-⚪️ DOMAIN,api.discord.co
-⚪️ DOMAIN,cdn.discordapp.com
-⚪️ DOMAIN,media.discordapp.net
-⚪️ DOMAIN,status.discord.com
-⚪️ DOMAIN,gateway.discord.gg
+[📡 API и CDN сервисы]
+🔷 DOMAIN,api.discord.co
+🔷 DOMAIN,cdn.discordapp.com
+🔷 DOMAIN,media.discordapp.net
+🔷 DOMAIN,status.discord.com
+🔷 DOMAIN,gateway.discord.gg
+✨ NEW: 🟩 DOMAIN,metrics.discord.com
 
-[Голосовые сервисы Discord]
-⚪️ DOMAIN-SUFFIX,discord.voice
-⚪️ DOMAIN-SUFFIX,discordrtc.com
-⚪️ DOMAIN,voice-webui.discord.gg
-⚪️ DOMAIN,voice-us-east-1.discord.gg
-⚪️ DOMAIN,voice-us-west-1.discord.gg
-⚪️ DOMAIN,voice-eu-central-1.discord.gg
-⚪️ DOMAIN,voice-eu-west-1.discord.gg
-⚪️ DOMAIN,voice-ap-south-1.discord.gg
-⚪️ DOMAIN,voice-singapore.discord.gg
-⚪️ DOMAIN,voice-sydney.discord.gg
-🟢 DOMAIN,*.voice.discord.gg
-🟢 DOMAIN,*.discord.media
-🟢 DOMAIN,stun.discord.gg
-🟢 DOMAIN,turn.discord.gg
+[🎙 Голосовые сервисы Discord]
+🔷 DOMAIN-SUFFIX,discord.voice
+🔷 DOMAIN-SUFFIX,discordrtc.com
+🔷 DOMAIN,voice-webui.discord.gg
+🔷 DOMAIN,voice-us-east-1.discord.gg
+🔷 DOMAIN,voice-us-west-1.discord.gg
+🔷 DOMAIN,voice-eu-central-1.discord.gg
+🔷 DOMAIN,voice-eu-west-1.discord.gg
+🔷 DOMAIN,voice-ap-south-1.discord.gg
+🔷 DOMAIN,voice-singapore.discord.gg
+🔷 DOMAIN,voice-sydney.discord.gg
+🟩 DOMAIN,*.voice.discord.gg
+🟩 DOMAIN,*.discord.media
+🟩 DOMAIN,stun.discord.gg
+🟩 DOMAIN,turn.discord.gg
+✨ NEW: 🟪 DOMAIN,voice-fallback.discord.gg
 
-[WebRTC и медиа серверы]
-⚪️ DOMAIN-SUFFIX,discord.media
-⚪️ DOMAIN-SUFFIX,discordapp.io
-⚪️ DOMAIN-SUFFIX,discord.co
-⚪️ DOMAIN-SUFFIX,discord.services
-⚪️ DOMAIN-SUFFIX,discord.new
-🟢 DOMAIN,*.discordsays.com
+[📺 WebRTC и медиа серверы]
+🔷 DOMAIN-SUFFIX,discord.media
+🔷 DOMAIN-SUFFIX,discordapp.io
+🔷 DOMAIN-SUFFIX,discord.co
+🔷 DOMAIN-SUFFIX,discord.services
+🔷 DOMAIN-SUFFIX,discord.new
+🟩 DOMAIN,*.discordsays.com
+✨ NEW: 🟪 DOMAIN-SUFFIX,discordcdn.com
 
-[IP-адреса Discord IPv4]
-⚪️ IP-CIDR,162.159.128.0/22
-⚪️ IP-CIDR,162.159.132.0/22
-⚪️ IP-CIDR,162.159.136.0/22
-⚪️ IP-CIDR,162.159.192.0/22
-⚪️ IP-CIDR,162.159.208.0/22
-⚪️ IP-CIDR,162.159.212.0/22
-⚪️ IP-CIDR,162.159.216.0/22
-🟢 IP-CIDR,35.190.247.0/24
-🟢 IP-CIDR,35.207.0.0/16
-🟢 IP-CIDR,35.217.0.0/16
-🟢 IP-CIDR,35.217.22.0/24
-🟢 IP-CIDR,35.220.0.0/14
-🟢 IP-CIDR,35.235.0.0/16
+[🛡️ IP-адреса Discord IPv4]
+🔷 IP-CIDR,162.159.128.0/22
+🔷 IP-CIDR,162.159.132.0/22
+🔷 IP-CIDR,162.159.136.0/22
+🔷 IP-CIDR,162.159.192.0/22
+🔷 IP-CIDR,162.159.208.0/22
+🔷 IP-CIDR,162.159.212.0/22
+🔷 IP-CIDR,162.159.216.0/22
+🟩 IP-CIDR,35.190.247.0/24
+🟩 IP-CIDR,35.207.0.0/16
+🟩 IP-CIDR,35.217.0.0/16
+🟩 IP-CIDR,35.217.22.0/24
+🟩 IP-CIDR,35.220.0.0/14
+🟩 IP-CIDR,35.235.0.0/16
+✨ NEW: 🟪 IP-CIDR,35.217.27.0/24
 
-[IP-адреса Discord IPv6]
-⚪️ IP-CIDR6,2620:119:2::/48
-⚪️ IP-CIDR6,2620:119:35::/48
-⚪️ IP-CIDR6,2620:119:36::/48
+[🌐 IP-адреса Discord IPv6]
+🔷 IP-CIDR6,2620:119:2::/48
+🔷 IP-CIDR6,2620:119:35::/48
+🔷 IP-CIDR6,2620:119:36::/48
+✨ NEW: 🟪 IP-CIDR6,2600:1900::/35
 
-[Ключевые слова]
-⚪️ DOMAIN-KEYWORD,discord
-⚪️ DOMAIN-KEYWORD,discordapp
-⚪️ DOMAIN-KEYWORD,discord-voice
+[🔑 Ключевые слова]
+🔷 DOMAIN-KEYWORD,discord
+🔷 DOMAIN-KEYWORD,discordapp
+🔷 DOMAIN-KEYWORD,discord-voice
+✨ NEW: 🟪 DOMAIN-KEYWORD,discord-rtc
 
-[User-Agent]
-⚪️ USER-AGENT,Discord*
-⚪️ USER-AGENT,Discordbot*
+[🤖 User-Agent]
+🔷 USER-AGENT,Discord*
+🔷 USER-AGENT,Discordbot*
+✨ NEW: 🟪 USER-AGENT,Discord-Client*
 
-[Дополнительные Google-сервисы]
-🟢 DOMAIN,*.google.com
-🟢 DOMAIN,*.googleapis.com
-🟢 DOMAIN,*.gstatic.com
-🟢 DOMAIN,*.cloud.google.com
-🟢 DOMAIN,stun.l.google.com:19302
-🟢 DOMAIN,stun1.l.google.com:19302
-🟢 DOMAIN,stun2.l.google.com:19302
+[☁️ Дополнительные сервисы]
+🟩 DOMAIN,*.google.com
+🟩 DOMAIN,*.googleapis.com
+🟩 DOMAIN,*.gstatic.com
+🟩 DOMAIN,*.cloud.google.com
+🟩 DOMAIN,stun.l.google.com:19302
+🟩 DOMAIN,stun1.l.google.com:19302
+🟩 DOMAIN,stun2.l.google.com:19302
+✨ NEW: 🟪 DOMAIN,*.googlehosted.com
