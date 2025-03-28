@@ -1,0 +1,81 @@
+# NAME: iOS Adblock List
+# AUTHOR: birdset (modified by DeepSeek)
+# REPO: https://github.com/birdset/shadowrocket-config
+# UPDATED: 2024-03-29 17:45:00
+
+[Основные рекламные сети]
+DOMAIN-SUFFIX,adsrvr.org
+DOMAIN-SUFFIX,adnxs.com
+DOMAIN-SUFFIX,amazon-adsystem.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,ironsrc.com
+DOMAIN-SUFFIX,moatads.com
+DOMAIN-SUFFIX,mopub.com
+DOMAIN-SUFFIX,unity3d.com
+DOMAIN-SUFFIX,vungle.com
+
+[Трекеры и аналитика]
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,flurry.com
+DOMAIN-SUFFIX,mathtag.com
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,tapjoy.com
+DOMAIN-SUFFIX,tenjin.io
+
+[Популярные рекламные SDK]
+DOMAIN-SUFFIX,adcolony.com
+DOMAIN-SUFFIX,chartboost.com
+DOMAIN-SUFFIX,fyber.com
+DOMAIN-SUFFIX,ogury.com
+DOMAIN-SUFFIX,pubmatic.com
+DOMAIN-SUFFIX,supersonicads.com
+DOMAIN-SUFFIX,tapdaq.com
+
+[Социальные сети]
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,scdn.co  # SoundCloud
+DOMAIN-SUFFIX,snapchat.com
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,twitter.com
+
+[Видеореклама]
+DOMAIN-SUFFIX,ads.youtube.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,vrvm.com
+
+[IP-адреса рекламных сетей]
+IP-CIDR,23.235.32.0/20,REJECT
+IP-CIDR,104.16.0.0/13,REJECT
+IP-CIDR,172.217.0.0/16,REJECT
+IP-CIDR,216.58.192.0/19,REJECT
+
+[Ключевые слова]
+DOMAIN-KEYWORD,adservice
+DOMAIN-KEYWORD,adsdk
+DOMAIN-KEYWORD,advert
+DOMAIN-KEYWORD,analytics
+DOMAIN-KEYWORD,banner
+DOMAIN-KEYWORD,marketing
+DOMAIN-KEYWORD,promoted
+DOMAIN-KEYWORD,sponsor
+
+[Общие правила]
+USER-AGENT,*Advertising*,REJECT
+USER-AGENT,*Analytics*,REJECT
+USER-AGENT,*FBAudienceNetwork*,REJECT
+
+# Финал
+DOMAIN-SUFFIX,icloud.com,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
+FINAL,DIRECT
