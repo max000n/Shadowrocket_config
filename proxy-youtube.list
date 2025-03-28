@@ -1,7 +1,5 @@
 # NAME: Proxy
-# AUTHOR: birdset
-# REPO: https://github.com/birdset/shadowrocket-config
-# UPDATED: 2024-08-20 07:55:00
+
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,youtu.be
