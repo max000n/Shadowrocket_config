@@ -1,23 +1,39 @@
 # Shadowrocket Rule-Set: Fake Ads Success (для игр)
 
 [Rule]
-# Блокировка + подмена ответа на 200 (успех)
-DOMAIN-SUFFIX,unity3d.com,REJECT-RULE
-DOMAIN-SUFFIX,unityads.unity3d.com,REJECT-RULE
-DOMAIN-SUFFIX,applovin.com,REJECT-RULE
-DOMAIN-SUFFIX,googleadservices.com,REJECT-RULE
-DOMAIN-SUFFIX,doubleclick.net,REJECT-RULE
-DOMAIN-SUFFIX,ironsrc.com,REJECT-RULE
-DOMAIN-SUFFIX,facebook.com,REJECT-RULE
-DOMAIN-SUFFIX,fbcdn.net,REJECT-RULE
+# Блокировка Facebook Ads (из вашего лога)
+DOMAIN-SUFFIX,facebook.com,REJECT
+DOMAIN-KEYWORD,adnw_logging,REJECT
+URL-REGEX,^https?://ep[0-9]+\.facebook\.com,REJECT
 
-# Подмена ответов рекламных запросов на 200 OK
-URL-REGEX,^https?://.*\.(unity3d|applovin|googleadservices|doubleclick|ironsrc|facebook)\.com/.*,REJECT-DICT
+# Блокировка Firebase-рекламы (из лога)
+DOMAIN-SUFFIX,firebaseremoteconfig.googleapis.com,REJECT
+DOMAIN-SUFFIX,firebaselogging-pa.googleapis.com,REJECT
+URL-REGEX,^https?://.*\.googleapis\.com/.*ads.*,REJECT
 
-# Перенаправление на 0.0.0.0 (дополнительная блокировка)
-MAP,unityads.unity3d.com,0.0.0.0
-MAP,googleads.g.doubleclick.net,0.0.0.0
-MAP,applovin.com,0.0.0.0
+# Общие рекламные правила (дополнительно)
+DOMAIN-SUFFIX,adsrvr.org,REJECT
+DOMAIN-SUFFIX,adservice.google.com,REJECT
+DOMAIN-KEYWORD,adserver,REJECT
 
-# Финал: если правила не сработали, пропускаем трафик
+# Подмена ответов на успешные (200 OK)
+URL-REGEX,^https?://.*(ad|ads|advert|promo).*,REJECT-DICT
+
+# Исключения для необходимых сервисов (из вашего лога)
+DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN-SUFFIX,google.com,DIRECT
+DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+
+# Финал
 FINAL,DIRECT
+
+[URL Rewrite]
+# Подмена ответов Facebook Ads
+^https?://graph\.facebook\.com/v\d+/ads 200 text/plain
+
+# Подмена Firebase Remote Config
+^https?://firebaseremoteconfig\.googleapis\.com/v1 200 application/json
+
+[MITM]
+enable = true
+hostname = *.facebook.com, *.googleapis.com
