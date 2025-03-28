@@ -1,7 +1,4 @@
 # NAME: iOS Adblock List
-# AUTHOR: birdset (modified by DeepSeek)
-# REPO: https://github.com/birdset/shadowrocket-config
-# UPDATED: 2024-03-29 17:45:00
 
 [Основные рекламные сети]
 DOMAIN-SUFFIX,adsrvr.org
