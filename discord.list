@@ -1,47 +1,52 @@
-# 🎮 Ultimate Discord Proxy Rules (v4.2) 🎮
+# 🚨 ВСЕ IP-АДРЕСА DISCORD (FULL-COVERAGE CONFIG) 🚨
 # 🔄 Последнее обновление: 2024-07-20
 
-[🔵 Основные домены]
-🟦 DOMAIN-SUFFIX,discord.com,PROXY
-🟦 DOMAIN-SUFFIX,discord.gg,PROXY
-🟦 DOMAIN-SUFFIX,discordapp.com,PROXY
-🟦 DOMAIN-SUFFIX,discordapp.net,PROXY
-✨ NEW 🟩 DOMAIN-SUFFIX,discord.dev,PROXY
+[🛡️ Cloudflare IPs (Основная инфраструктура)]
+IP-CIDR,162.159.128.0/22,PROXY
+IP-CIDR,162.159.132.0/22,PROXY
+IP-CIDR,162.159.136.0/22,PROXY
+IP-CIDR,162.159.192.0/22,PROXY
+IP-CIDR,162.159.208.0/22,PROXY
+IP-CIDR,162.159.212.0/22,PROXY
+IP-CIDR,162.159.216.0/22,PROXY
+IP-CIDR,162.159.220.0/22,PROXY
 
-[🎙 Голосовые серверы]
-🟪 DOMAIN,*.voice.discord.gg,PROXY
-🟪 DOMAIN,stun.discord.gg,PROXY
-🟪 DOMAIN,turn.discord.gg,PROXY
-🚨 CRITICAL 🟥 IP-CIDR,35.217.0.0/16,PROXY ← Включает 35.217.49.235
+[☁️ Google Cloud IPs (Голосовые серверы)]
+# US Central
+IP-CIDR,35.190.247.0/24,PROXY
+IP-CIDR,35.190.248.0/24,PROXY
+IP-CIDR,35.191.0.0/16,PROXY
+IP-CIDR,35.192.0.0/14,PROXY
 
-[🛡️ Полные IP-диапазоны]
-# Cloudflare
-🟦 IP-CIDR,162.159.128.0/22,PROXY
-# Google Cloud
-🟪 IP-CIDR,35.190.0.0/17,PROXY
-🟪 IP-CIDR,35.208.0.0/13,PROXY
-✨ NEW 🟩 IP-CIDR,35.217.27.0/24,PROXY
+# US East
+IP-CIDR,35.208.0.0/13,PROXY
+IP-CIDR,35.216.0.0/15,PROXY
+IP-CIDR,35.217.0.0/16,PROXY ← Включает 35.217.49.235
+IP-CIDR,35.217.22.0/24,PROXY
+IP-CIDR,35.217.27.0/24,PROXY
+IP-CIDR,35.217.49.0/24,PROXY
 
-[🤖 User-Agents]
-🟦 USER-AGENT,Discord*,PROXY
-🟦 USER-AGENT,Discordbot*,PROXY
-✨ NEW 🟩 USER-AGENT,Discord-Client*,PROXY
-🟪 USER-AGENT,DiscordAndroid*,PROXY
-🟪 USER-AGENT,DiscordiOS*,PROXY
+# Europe
+IP-CIDR,35.195.0.0/16,PROXY
+IP-CIDR,35.205.0.0/16,PROXY
 
-[🔌 Порты]
-🚨 UDP,50000-65535,PROXY ← Обязательно для голоса
+[🌐 IPv6 диапазоны]
+IP-CIDR6,2620:119:2::/48,PROXY
+IP-CIDR6,2620:119:35::/48,PROXY
+IP-CIDR6,2600:1900::/35,PROXY
 
-[⚡ Авто-обновление]
+[🔌 Динамические порты]
+UDP,50000-65535,PROXY
+
+[⚡ Автоматическое обновление]
 rule-providers:
-  discord_rules:
+  discord-ips:
     type: http
-    url: "https://your-api.com/discord-rules.yaml"
+    url: "https://cdn.discordapp.com/ip-ranges/latest.json" 
     interval: 3600
+    behavior: ipcidr
 
-# 🎨 Легенда:
-# 🟦 - Базовые правила
-# 🟪 - Голосовые/критичные
-# 🟩 - Новые добавления
-# 🟥 - Экстренные фиксы
-# 🚨 - Обязательные настройки
+[📌 Резервные правила]
+# Если новые IP не обнаружены
+IP-CIDR,35.0.0.0/8,PROXY
+IP-CIDR,162.159.0.0/16,PROXY
