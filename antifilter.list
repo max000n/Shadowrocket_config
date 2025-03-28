@@ -1,7 +1,5 @@
 # NAME: Proxy list
-# AUTHOR: birdset
-# REPO: https://github.com/birdset/shadowrocket-config
-# UPDATED: 2024-09-16 15:13:00
+
 DOMAIN-SUFFIX,10minutemail.com
 DOMAIN-SUFFIX,1337x.to
 DOMAIN-SUFFIX,4pda.ru
