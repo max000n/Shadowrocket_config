@@ -48,4 +48,25 @@ DOMAIN-KEYWORD,tdesktop
 DOMAIN-KEYWORD,telegcdn
 
 [User-Agent]
+# Официальные клиенты
 USER-AGENT,Telegram*
+USER-AGENT,Telegram/*
+USER-AGENT,TelegramBot*
+USER-AGENT,Telegram-iOS*
+USER-AGENT,Telegram-Android*
+USER-AGENT,TelegramDesktop*
+USER-AGENT,TelegramWeb*
+
+# Альтернативные клиенты
+USER-AGENT,Nekogram*
+USER-AGENT,PlusMessenger*
+USER-AGENT,TelegramFZ*
+
+# Боты и API
+USER-AGENT,TDLib*
+USER-AGENT,Telegram-API*
+
+# Веб-версии
+USER-AGENT,Mozilla/*Telegram*
+USER-AGENT,Chrome/*Telegram*
+USER-AGENT,Safari/*Telegram*
