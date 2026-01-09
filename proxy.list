@@ -1,4 +1,4 @@
-# NAME: Proxy list - Разделённый по категориям (обновлено для Google AI Studio/Gemini)
+# NAME: Proxy list - Разделённый по категориям (обновлено с Lumex)
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -79,7 +79,7 @@ DOMAIN-SUFFIX,nnm-club.name
 DOMAIN-SUFFIX,nnmclub.to
 
 # =============================================
-# 5. Пиратские онлайн-кинотеатры (в реестре РКН)
+# 5. Пиратские онлайн-кинотеатры (в реестре РКН + популярные зеркала)
 # =============================================
 DOMAIN-SUFFIX,hdrezka.ag
 DOMAIN-SUFFIX,hdrezka.cm
@@ -95,21 +95,34 @@ DOMAIN-SUFFIX,tushkan.net
 DOMAIN-SUFFIX,kino.pub
 
 # =============================================
-# 6. Сервисы для взрослых (18+, в реестре РКН)
+# 6. Lumex и связанные ресурсы (пиратское видео, заблокировано РКН)
+# =============================================
+DOMAIN-SUFFIX,lumex.host
+DOMAIN-SUFFIX,lumex.space
+DOMAIN-SUFFIX,lumex.cloud
+DOMAIN,api.lumex.space
+DOMAIN,p.lumex.space
+DOMAIN,p.lumex.cloud
+DOMAIN-SUFFIX,agl007.site
+DOMAIN,spx-s1.agl007.site
+DOMAIN,cvt-s2.agl007.site
+
+# =============================================
+# 7. Сервисы для взрослых (18+, в реестре РКН)
 # =============================================
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xv-ru.com
 DOMAIN-SUFFIX,pornhub.com
 
 # =============================================
-# 7. Блог-платформы и контент (заблокированные РКН)
+# 8. Блог-платформы и контент (заблокированные РКН)
 # =============================================
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,archive.org
 
 # =============================================
-# 8. Заблокированные электронные библиотеки (пиратские, в реестре РКН)
+# 9. Заблокированные электронные библиотеки (пиратские, в реестре РКН)
 # =============================================
 DOMAIN-SUFFIX,flibusta.is
 DOMAIN-SUFFIX,flibusta.net
@@ -129,7 +142,7 @@ DOMAIN-SUFFIX,lib.rus.ec
 DOMAIN-SUFFIX,librusec.net
 
 # =============================================
-# 9. Нейросети и ИИ (геоблок от сервисов или РКН для РФ)
+# 10. Нейросети и ИИ (геоблок от сервисов или РКН для РФ)
 # =============================================
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
@@ -141,18 +154,18 @@ DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,ai.google.dev
-DOMAIN-SUFFIX,makersuite.google.com  # старый/редирект для AI Studio
-DOMAIN-SUFFIX,generativelanguage.googleapis.com  # API Gemini
-DOMAIN-SUFFIX,googleusercontent.com  # для контента/изображений
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,usercontent.google.com
 
 # =============================================
-# 10. Технологии и разработка (заблокированные или ограниченные)
+# 11. Технологии и разработка (заблокированные или ограниченные)
 # =============================================
 DOMAIN-SUFFIX,jetbrains.com
 
 # =============================================
-# 11. Другие заблокированные/ограниченные сервисы
+# 12. Другие заблокированные/ограниченные сервисы
 # =============================================
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,licdn.com
@@ -164,7 +177,7 @@ DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,skladchina.biz
 
 # =============================================
-# 12. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
+# 13. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
 # =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
@@ -202,3 +215,5 @@ DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,aistudio
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-KEYWORD,makersuite
+DOMAIN-KEYWORD,lumex
+DOMAIN-KEYWORD,agl007
