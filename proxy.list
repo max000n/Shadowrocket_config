@@ -72,6 +72,3 @@ DOMAIN-KEYWORD,pornhub,PROXY
 DOMAIN-KEYWORD,tiktok,PROXY
 DOMAIN-KEYWORD,x.ai,PROXY
 DOMAIN-KEYWORD,grok.com,PROXY
-
-# Всё остальное — напрямую
-FINAL,DIRECT
