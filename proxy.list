@@ -1,14 +1,18 @@
-# NAME: Proxy list
+# NAME: Proxy list - Разделённый по категориям
 
+# =============================================
+# 1. Инструменты проверки IP и утечек
+# =============================================
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
-DOMAIN-SUFFIX,aol.com
 DOMAIN-SUFFIX,browserleaks.com
-DOMAIN-SUFFIX,canva.com
-DOMAIN-SUFFIX,dyson.com
-DOMAIN-SUFFIX,gravatar.com
+DOMAIN-SUFFIX,maxmind.com
+
+# =============================================
+# 2. Социальные сети и мессенджеры
+# =============================================
+DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,cdnfbsbx.com
 DOMAIN-SUFFIX,igcdn.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
@@ -19,48 +23,134 @@ DOMAIN-SUFFIX,l.facebook.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,cdnfbsbx.com
 DOMAIN-SUFFIX,f.vision
 DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,cdnfacebook.com
 DOMAIN-SUFFIX,fburl.com
-DOMAIN-SUFFIX,jetbrans.com
-DOMAIN-SUFFIX,licdn.com
-DOMAIN-SUFFIX,linkedin.com
-DOMAIN-SUFFIX,lnkd.in
-DOMAIN-SUFFIX,maxmind.com
-DOMAIN-SUFFIX,medium.com
-DOMAIN-SUFFIX,meta.com
-DOMAIN-SUFFIX,netflix.com
-DOMAIN-SUFFIX,nnmclub.to
-DOMAIN-SUFFIX,netpeaksoftware.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,openwrt.org
-DOMAIN-SUFFIX,proton.me
-DOMAIN-SUFFIX,quora.com
-DOMAIN-SUFFIX,semrush.com
-DOMAIN-SUFFIX,setapp.com
-DOMAIN-SUFFIX,skladchina.biz
-DOMAIN-SUFFIX,slideshare.net
-DOMAIN-SUFFIX,soundcloud.com
-DOMAIN-SUFFIX,t.co
-DOMAIN-SUFFIX,tumblr.com
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twitter.co
 DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,twitter.co
+DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitthat.com
 DOMAIN-SUFFIX,twtkr.com
 DOMAIN-SUFFIX,twttr.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,tumblr.com
+
+# =============================================
+# 3. Видео-платформы и стриминг
+# =============================================
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
-DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,byteoversea.com
+
+# =============================================
+# 4. Музыкальные сервисы
+# =============================================
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,soundcloud.com
+
+# =============================================
+# 5. Торрент-трекеры
+# =============================================
+DOMAIN-SUFFIX,rutracker.org
+DOMAIN-SUFFIX,rutracker.net
+DOMAIN-SUFFIX,rutracker.cc
+DOMAIN-SUFFIX,rutor.info
+DOMAIN-SUFFIX,rutor.org
+DOMAIN-SUFFIX,new-rutor.org
+DOMAIN-SUFFIX,kinozal.tv
+DOMAIN-SUFFIX,kinozal.guru
+DOMAIN-SUFFIX,lostfilm.tv
+DOMAIN-SUFFIX,nnm-club.me
+DOMAIN-SUFFIX,nnm-club.name
+DOMAIN-SUFFIX,nnmclub.to
+
+# =============================================
+# 6. Пиратские онлайн-кинотеатры (фильмы и сериалы)
+# =============================================
+DOMAIN-SUFFIX,hdrezka.ag
+DOMAIN-SUFFIX,hdrezka.cm
+DOMAIN-SUFFIX,rezka.ag
+DOMAIN-SUFFIX,lordfilm.tv
+DOMAIN-SUFFIX,lordfilm.lu
+DOMAIN-SUFFIX,lordserial.club
+DOMAIN-SUFFIX,kinogo.biz
+DOMAIN-SUFFIX,kinogo.cc
+DOMAIN-SUFFIX,kinogo.la
+DOMAIN-SUFFIX,bobfilm.net
+DOMAIN-SUFFIX,tushkan.net
 DOMAIN-SUFFIX,kino.pub
+
+# =============================================
+# 7. Сервисы для взрослых (18+)
+# =============================================
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xv-ru.com
 DOMAIN-SUFFIX,pornhub.com
+
+# =============================================
+# 8. Блог-платформы и контент
+# =============================================
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,slideshare.net
+DOMAIN-SUFFIX,gravatar.com
+DOMAIN-SUFFIX,archive.org
+
+# =============================================
+# 9. Технологии, разработка и ИИ
+# =============================================
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,openwrt.org
+DOMAIN-SUFFIX,netpeaksoftware.com
+DOMAIN-SUFFIX,semrush.com
+
+# =============================================
+# 10. Другие заблокированные/ограниченные сервисы
+# =============================================
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,canva.com
+DOMAIN-SUFFIX,dyson.com
+DOMAIN-SUFFIX,licdn.com
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,lnkd.in
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,skladchina.biz
 DOMAIN-SUFFIX,fast.com
 DOMAIN-SUFFIX,toyotaownersclub.com
-DOMAIN-SUFFIX,thumbsnap.com 
+DOMAIN-SUFFIX,thumbsnap.com
+
+# =============================================
+# 11. DOMAIN-KEYWORD (для лучшего покрытия)
+# =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
 DOMAIN-KEYWORD,kahoot
@@ -72,3 +162,16 @@ DOMAIN-KEYWORD,pornhub
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,x.ai
 DOMAIN-KEYWORD,grok.com
+DOMAIN-KEYWORD,youtube
+DOMAIN-KEYWORD,discord
+DOMAIN-KEYWORD,reddit
+DOMAIN-KEYWORD,twitch
+DOMAIN-KEYWORD,rutracker
+DOMAIN-KEYWORD,rutor
+DOMAIN-KEYWORD,kinozal
+DOMAIN-KEYWORD,lostfilm
+DOMAIN-KEYWORD,nnmclub
+DOMAIN-KEYWORD,hdrezka
+DOMAIN-KEYWORD,lordfilm
+DOMAIN-KEYWORD,kinogo
+DOMAIN-KEYWORD,torrent
