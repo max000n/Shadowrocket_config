@@ -1,4 +1,4 @@
-# NAME: Proxy list - Разделённый по категориям
+# NAME: Proxy list - Разделённый по категориям (без Discord и YouTube)
 
 # =============================================
 # 1. Инструменты проверки IP и утечек
@@ -36,23 +36,14 @@ DOMAIN-SUFFIX,twtkr.com
 DOMAIN-SUFFIX,twttr.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,x.com
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
-DOMAIN-SUFFIX,discordapp.com
-DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,tumblr.com
 
 # =============================================
-# 3. Видео-платформы и стриминг
+# 3. Видео-платформы и стриминг (без YouTube)
 # =============================================
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,youtu.be
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,ggpht.com
-DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
 DOMAIN-SUFFIX,vimeo.com
@@ -149,7 +140,7 @@ DOMAIN-SUFFIX,toyotaownersclub.com
 DOMAIN-SUFFIX,thumbsnap.com
 
 # =============================================
-# 11. DOMAIN-KEYWORD (для лучшего покрытия)
+# 11. DOMAIN-KEYWORD (для лучшего покрытия, без Discord и YouTube)
 # =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
@@ -162,8 +153,7 @@ DOMAIN-KEYWORD,pornhub
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,x.ai
 DOMAIN-KEYWORD,grok.com
-DOMAIN-KEYWORD,youtube
-DOMAIN-KEYWORD,discord
+DOMAIN-KEYWORD,discord  # оставил, если вдруг поддомены где-то встретятся, но можно удалить
 DOMAIN-KEYWORD,reddit
 DOMAIN-KEYWORD,twitch
 DOMAIN-KEYWORD,rutracker
