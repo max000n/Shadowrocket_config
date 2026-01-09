@@ -41,13 +41,8 @@ DOMAIN-SUFFIX,tumblr.com
 # =============================================
 # 2. Видео-платформы и стриминг (обычные)
 # =============================================
-DOMAIN-SUFFIX,twitch.tv
-DOMAIN-SUFFIX,twitchcdn.net
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
-DOMAIN-SUFFIX,tiktok.com
-DOMAIN-SUFFIX,tiktokcdn.com
-DOMAIN-SUFFIX,byteoversea.com
 
 # =============================================
 # 3. Музыкальные сервисы (заблокированные или ушедшие из РФ)
