@@ -1,4 +1,4 @@
-# NAME: Proxy list - Разделённый по категориям (обновлено с Lumex)
+# NAME: Proxy list - Разделённый по категориям (расширенное покрытие видео + 18+)
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -43,7 +43,7 @@ DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,tumblr.com
 
 # =============================================
-# 2. Видео-платформы и стриминг
+# 2. Видео-платформы и стриминг (обычные)
 # =============================================
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
@@ -79,20 +79,34 @@ DOMAIN-SUFFIX,nnm-club.name
 DOMAIN-SUFFIX,nnmclub.to
 
 # =============================================
-# 5. Пиратские онлайн-кинотеатры (в реестре РКН + популярные зеркала)
+# 5. Пиратские онлайн-кинотеатры (в реестре РКН + расширенные CDN)
 # =============================================
 DOMAIN-SUFFIX,hdrezka.ag
 DOMAIN-SUFFIX,hdrezka.cm
 DOMAIN-SUFFIX,rezka.ag
+DOMAIN-SUFFIX,cdn.rezka.ag        # основной CDN для видео/изображений
+DOMAIN-SUFFIX,static.rezka.ag     # статические файлы, превью
+
 DOMAIN-SUFFIX,lordfilm.tv
 DOMAIN-SUFFIX,lordfilm.lu
 DOMAIN-SUFFIX,lordserial.club
+DOMAIN-SUFFIX,cdn.lordfilm.tv     # часто используемый CDN
+DOMAIN-SUFFIX,static.lordfilm.tv
+
 DOMAIN-SUFFIX,kinogo.biz
 DOMAIN-SUFFIX,kinogo.cc
 DOMAIN-SUFFIX,kinogo.la
+DOMAIN-SUFFIX,cdn.kinogo.cc       # CDN для видео
+DOMAIN-SUFFIX,static.kinogo.cc
+
 DOMAIN-SUFFIX,bobfilm.net
 DOMAIN-SUFFIX,tushkan.net
 DOMAIN-SUFFIX,kino.pub
+
+# Lostfilm — расширенное покрытие
+DOMAIN-SUFFIX,lostfilm.tv
+DOMAIN-SUFFIX,cdn.lostfilm.tv
+DOMAIN-SUFFIX,video.lostfilm.tv
 
 # =============================================
 # 6. Lumex и связанные ресурсы (пиратское видео, заблокировано РКН)
@@ -108,11 +122,20 @@ DOMAIN,spx-s1.agl007.site
 DOMAIN,cvt-s2.agl007.site
 
 # =============================================
-# 7. Сервисы для взрослых (18+, в реестре РКН)
+# 7. Сервисы для взрослых (18+, в реестре РКН + полный CDN)
 # =============================================
+# XVideos — основной сайт + CDN
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xv-ru.com
+DOMAIN-SUFFIX,xvideos-cdn.com     # основной CDN (покрывает cdn77-vid, img-hw, gcore-vid, static-ss и т.д.)
+
+# Pornhub — полный набор
 DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+DOMAIN-SUFFIX,phncdn.com          # основной CDN (ei., di., ci., cv., ss., hv- и другие поддомены)
+DOMAIN-SUFFIX,trafficjunky.net    # реклама/трекинг
+DOMAIN-SUFFIX,nsimg.net           # изображения/превью
+DOMAIN-SUFFIX,phprcdn.com         # альтернативный CDN
 
 # =============================================
 # 8. Блог-платформы и контент (заблокированные РКН)
