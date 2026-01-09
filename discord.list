@@ -120,6 +120,3 @@ USER-AGENT,Discord/13*,PROXY  # Версии 13.x.x
 USER-AGENT,DTunnel*,PROXY  # Для некоторых мобильных клиентов
 USER-AGENT,DiscordLite*,PROXY
 USER-AGENT,DiscordElectron*,PROXY
-
-# Если ничего выше не сработало, остальной трафик идёт напрямую (убедитесь, что это в самом конце)
-FINAL,DIRECT
