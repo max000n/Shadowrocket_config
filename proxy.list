@@ -1,4 +1,4 @@
-# NAME: Proxy list - Разделённый по категориям (только заблокированные в РФ + инструменты IP + AI Studio)
+# NAME: Proxy list - Разделённый по категориям (обновлено для Google AI Studio/Gemini)
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -141,6 +141,10 @@ DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,makersuite.google.com  # старый/редирект для AI Studio
+DOMAIN-SUFFIX,generativelanguage.googleapis.com  # API Gemini
+DOMAIN-SUFFIX,googleusercontent.com  # для контента/изображений
+DOMAIN-SUFFIX,usercontent.google.com
 
 # =============================================
 # 10. Технологии и разработка (заблокированные или ограниченные)
@@ -196,3 +200,5 @@ DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,midjourney
 DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,aistudio
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN-KEYWORD,makersuite
