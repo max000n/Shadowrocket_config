@@ -1,7 +1,7 @@
-# NAME: Proxy list - Разделённый по категориям (без Discord и YouTube)
+# NAME: Proxy list - Разделённый по категориям (только заблокированные в РФ + инструменты IP + AI Studio)
 
 # =============================================
-# 1. Инструменты проверки IP и утечек
+# 0. Инструменты проверки IP и утечек (для теста прокси)
 # =============================================
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
@@ -10,7 +10,7 @@ DOMAIN-SUFFIX,maxmind.com
 DOMAIN-SUFFIX,2ip.ru
 
 # =============================================
-# 2. Социальные сети и мессенджеры
+# 1. Социальные сети и мессенджеры (заблокированные РКН)
 # =============================================
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
@@ -43,7 +43,7 @@ DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,tumblr.com
 
 # =============================================
-# 3. Видео-платформы и стриминг (без YouTube)
+# 2. Видео-платформы и стриминг
 # =============================================
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
@@ -54,7 +54,7 @@ DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,byteoversea.com
 
 # =============================================
-# 4. Музыкальные сервисы
+# 3. Музыкальные сервисы (заблокированные или ушедшие из РФ)
 # =============================================
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,spotifycdn.com
@@ -63,7 +63,7 @@ DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,soundcloud.com
 
 # =============================================
-# 5. Торрент-трекеры
+# 4. Торрент-трекеры (в реестре РКН)
 # =============================================
 DOMAIN-SUFFIX,rutracker.org
 DOMAIN-SUFFIX,rutracker.net
@@ -79,7 +79,7 @@ DOMAIN-SUFFIX,nnm-club.name
 DOMAIN-SUFFIX,nnmclub.to
 
 # =============================================
-# 6. Пиратские онлайн-кинотеатры (фильмы и сериалы)
+# 5. Пиратские онлайн-кинотеатры (в реестре РКН)
 # =============================================
 DOMAIN-SUFFIX,hdrezka.ag
 DOMAIN-SUFFIX,hdrezka.cm
@@ -95,53 +95,72 @@ DOMAIN-SUFFIX,tushkan.net
 DOMAIN-SUFFIX,kino.pub
 
 # =============================================
-# 7. Сервисы для взрослых (18+)
+# 6. Сервисы для взрослых (18+, в реестре РКН)
 # =============================================
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xv-ru.com
 DOMAIN-SUFFIX,pornhub.com
 
 # =============================================
-# 8. Блог-платформы и контент
+# 7. Блог-платформы и контент (заблокированные РКН)
 # =============================================
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,quora.com
-DOMAIN-SUFFIX,slideshare.net
-DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,archive.org
 
 # =============================================
-# 9. Технологии, разработка и ИИ
+# 8. Заблокированные электронные библиотеки (пиратские, в реестре РКН)
+# =============================================
+DOMAIN-SUFFIX,flibusta.is
+DOMAIN-SUFFIX,flibusta.net
+DOMAIN-SUFFIX,flibusta.site
+DOMAIN-SUFFIX,flibusta.club
+DOMAIN-SUFFIX,libgen.is
+DOMAIN-SUFFIX,libgen.rs
+DOMAIN-SUFFIX,libgen.li
+DOMAIN-SUFFIX,gen.lib.rus.ec
+DOMAIN-SUFFIX,z-lib.org
+DOMAIN-SUFFIX,zlibrary.se
+DOMAIN-SUFFIX,b-ok.org
+DOMAIN-SUFFIX,bookfi.net
+DOMAIN-SUFFIX,litmir.me
+DOMAIN-SUFFIX,litmir.club
+DOMAIN-SUFFIX,lib.rus.ec
+DOMAIN-SUFFIX,librusec.net
+
+# =============================================
+# 9. Нейросети и ИИ (геоблок от сервисов или РКН для РФ)
 # =============================================
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,jetbrains.com
-DOMAIN-SUFFIX,openwrt.org
-DOMAIN-SUFFIX,netpeaksoftware.com
-DOMAIN-SUFFIX,semrush.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,ai.google.dev
 
 # =============================================
-# 10. Другие заблокированные/ограниченные сервисы
+# 10. Технологии и разработка (заблокированные или ограниченные)
 # =============================================
-DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,jetbrains.com
+
+# =============================================
+# 11. Другие заблокированные/ограниченные сервисы
+# =============================================
 DOMAIN-SUFFIX,canva.com
-DOMAIN-SUFFIX,dyson.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,lnkd.in
 DOMAIN-SUFFIX,meta.com
 DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,proton.me
-DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,skladchina.biz
-DOMAIN-SUFFIX,fast.com
-DOMAIN-SUFFIX,toyotaownersclub.com
-DOMAIN-SUFFIX,thumbsnap.com
 
 # =============================================
-# 11. DOMAIN-KEYWORD (для лучшего покрытия, без Discord и YouTube)
+# 12. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
 # =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
@@ -154,7 +173,6 @@ DOMAIN-KEYWORD,pornhub
 DOMAIN-KEYWORD,tiktok
 DOMAIN-KEYWORD,x.ai
 DOMAIN-KEYWORD,grok.com
-DOMAIN-KEYWORD,discord  # оставил, если вдруг поддомены где-то встретятся, но можно удалить
 DOMAIN-KEYWORD,reddit
 DOMAIN-KEYWORD,twitch
 DOMAIN-KEYWORD,rutracker
@@ -166,3 +184,15 @@ DOMAIN-KEYWORD,hdrezka
 DOMAIN-KEYWORD,lordfilm
 DOMAIN-KEYWORD,kinogo
 DOMAIN-KEYWORD,torrent
+DOMAIN-KEYWORD,flibusta
+DOMAIN-KEYWORD,libgen
+DOMAIN-KEYWORD,zlibrary
+DOMAIN-KEYWORD,litmir
+DOMAIN-KEYWORD,librusec
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,chatgpt
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,claude
+DOMAIN-KEYWORD,midjourney
+DOMAIN-KEYWORD,gemini
+DOMAIN-KEYWORD,aistudio
