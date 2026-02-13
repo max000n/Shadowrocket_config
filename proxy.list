@@ -37,6 +37,10 @@ DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,tumblr.com
+DOMAIN-SUFFIX,badoo.com
+DOMAIN-SUFFIX,badoocdn.com
+DOMAIN-SUFFIX,bumbcdn.com
+DOMAIN-SUFFIX,badoo.app
 
 # =============================================
 # 2. Видео-платформы и стриминг (обычные)
