@@ -192,7 +192,16 @@ DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,skladchina.biz
 
 # =============================================
-# 13. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
+# 12. Игровые сервисы (Epic Games / Fortnite / Unreal Engine)
+# =============================================
+DOMAIN-SUFFIX,epicgames.com
+DOMAIN-SUFFIX,epicgames.dev
+DOMAIN-SUFFIX,epicgames.net
+DOMAIN-SUFFIX,fortnite.com
+DOMAIN-SUFFIX,unrealengine.com
+
+# =============================================
+# 14. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
 # =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
@@ -232,3 +241,6 @@ DOMAIN-KEYWORD,generativelanguage
 DOMAIN-KEYWORD,makersuite
 DOMAIN-KEYWORD,lumex
 DOMAIN-KEYWORD,agl007
+DOMAIN-KEYWORD,epicgames
+DOMAIN-KEYWORD,fortnite
+DOMAIN-KEYWORD,unrealengine
