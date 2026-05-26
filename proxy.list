@@ -1,4 +1,6 @@
 # NAME: Proxy list - Разделённый по категориям
+# UPDATED: 2026-05-26
+# CHANGES: Добавлены домены для ChatGPT (загрузка файлов, CDN, auth) и Telegram (emoji, стикеры, CDN, Web)
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -43,6 +45,35 @@ DOMAIN-SUFFIX,bumbcdn.com
 DOMAIN-SUFFIX,badoo.app
 
 # =============================================
+# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web)
+# =============================================
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN,cdn1.telegram-cdn.org
+DOMAIN,cdn2.telegram-cdn.org
+DOMAIN,cdn3.telegram-cdn.org
+DOMAIN,cdn4.telegram-cdn.org
+DOMAIN,cdn5.telegram-cdn.org
+DOMAIN,web.telegram.org
+DOMAIN,webz.telegram.org
+DOMAIN,webk.telegram.org
+DOMAIN,a.telegram.org
+DOMAIN,k.telegram.org
+DOMAIN,z.telegram.org
+DOMAIN,api.telegram.org
+DOMAIN,core.telegram.org
+DOMAIN,my.telegram.org
+DOMAIN,vesta.web.telegram.org
+DOMAIN,pluto.web.telegram.org
+DOMAIN,venus.web.telegram.org
+DOMAIN,aurora.web.telegram.org
+DOMAIN,flora.web.telegram.org
+DOMAIN-SUFFIX,telesco.pe
+
+# =============================================
 # 2. Видео-платформы и стриминг (обычные)
 # =============================================
 DOMAIN-SUFFIX,vimeo.com
@@ -56,6 +87,8 @@ DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,soundcloud.com
+DOMAIN-SUFFIX,deezer.com
+DOMAIN-SUFFIX,dzcdn.net
 
 # =============================================
 # 4. Торрент-трекеры (в реестре РКН)
@@ -159,13 +192,36 @@ DOMAIN-SUFFIX,librusec.net
 # =============================================
 # 10. Нейросети и ИИ (геоблок от сервисов или РКН для РФ)
 # =============================================
+# --- OpenAI / ChatGPT (расширенный набор для файлов, CDN, auth) ---
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN,auth0.openai.com
+DOMAIN,auth.openai.com
+DOMAIN,platform.openai.com
+DOMAIN,api.openai.com
+DOMAIN,status.openai.com
+DOMAIN,chat.openai.com
+DOMAIN,android.chat.openai.com
+DOMAIN,ios.chat.openai.com
+DOMAIN,desktop.chat.openai.com
+DOMAIN,tcr9i.chat.openai.com
+DOMAIN,files.oaiusercontent.com
+DOMAIN,files.oasisusercontent.com
+DOMAIN,cdn.openaimerge.com
+
+# --- Anthropic / Claude ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+DOMAIN,console.anthropic.com
+
+# --- Midjourney ---
 DOMAIN-SUFFIX,midjourney.com
+DOMAIN,cdn.midjourney.com
+
+# --- Google AI ---
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,ai.google.dev
@@ -173,11 +229,21 @@ DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,usercontent.google.com
+DOMAIN-SUFFIX,ai.google
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,generativeai.google
+
+# --- xAI ---
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
 
 # =============================================
 # 11. Технологии и разработка (заблокированные или ограниченные)
 # =============================================
 DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN,raw.githubusercontent.com
 
 # =============================================
 # 12. Другие заблокированные/ограниченные сервисы
@@ -191,8 +257,70 @@ DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,skladchina.biz
 
+# --- TikTok ---
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,musical.ly
+
+# --- Twitch ---
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
+DOMAIN-SUFFIX,jtvnw.net
+DOMAIN-SUFFIX,ttvnw.net
+
+# --- Kahoot ---
+DOMAIN-SUFFIX,kahoot.it
+DOMAIN-SUFFIX,kahoot.com
+
+# --- Cloudflare (CAPTCHA, CDN для многих сервисов) ---
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN,challenges.cloudflare.com
+
+# --- Stripe (платежи, используется OpenAI и др.) ---
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripe.network
+DOMAIN,js.stripe.com
+
+# --- Intercom (поддержка, используется OpenAI) ---
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,intercom.com
+DOMAIN,js.intercomcdn.com
+
+# --- Sentry (отслеживание ошибок) ---
+DOMAIN-SUFFIX,sentry.io
+DOMAIN,o207216.ingest.sentry.io
+DOMAIN,o33249.ingest.sentry.io
+
+# --- Statsig (фича-флаги, используется OpenAI) ---
+DOMAIN-SUFFIX,statsig.com
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN,events.statsigapi.net
+
+# --- WorkOS (аутентификация, используется OpenAI) ---
+DOMAIN-SUFFIX,workos.com
+DOMAIN-SUFFIX,workoscdn.com
+DOMAIN,cdn.workos.com
+DOMAIN,setup.workos.com
+DOMAIN,forwarder.workos.com
+DOMAIN,images.workoscdn.com
+DOMAIN,workos.imgix.net
+DOMAIN,setup.auth.openai.com
+
+# --- SendGrid (email, используется OpenAI) ---
+DOMAIN-SUFFIX,sendgrid.net
+
+# --- Feature Gates / Prod Registry ---
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,featureassets.org
+DOMAIN-SUFFIX,prodregistryv2.org
+
+# --- Datadog (мониторинг) ---
+DOMAIN,rum.browser-intake-datadoghq.com
+
 # =============================================
-# 12. Игровые сервисы (Epic Games / Fortnite / Unreal Engine)
+# 13. Игровые сервисы (Epic Games / Fortnite / Unreal Engine)
 # =============================================
 DOMAIN-SUFFIX,epicgames.com
 DOMAIN-SUFFIX,epicgames.dev
@@ -244,3 +372,17 @@ DOMAIN-KEYWORD,agl007
 DOMAIN-KEYWORD,epicgames
 DOMAIN-KEYWORD,fortnite
 DOMAIN-KEYWORD,unrealengine
+DOMAIN-KEYWORD,telegram
+DOMAIN-KEYWORD,workos
+DOMAIN-KEYWORD,statsig
+DOMAIN-KEYWORD,intercom
+DOMAIN-KEYWORD,cloudflare
+DOMAIN-KEYWORD,stripe
+DOMAIN-KEYWORD,sentry
+DOMAIN-KEYWORD,sendgrid
+DOMAIN-KEYWORD,github
+DOMAIN-KEYWORD,tiktokcdn
+DOMAIN-KEYWORD,twitchcdn
+DOMAIN-KEYWORD,oaistatic
+DOMAIN-KEYWORD,oaiusercontent
+DOMAIN-KEYWORD,sora
