@@ -1,6 +1,6 @@
 # NAME: Proxy list - Разделённый по категориям
 # UPDATED: 2026-06-06
-# CHANGES: Исправлена загрузка видео в Telegram: добавлены полные IP-CIDR диапазоны всех дата-центров (DC1-DC5), домены dc1-5.telegram.org, telegram-cdn.net. Добавлены домены экосистемы (Telegraph, Fragment).
+# CHANGES: Добавлены ВСЕ известные IP-диапазоны Telegram (включая 91.105.192.0/24), исправлен порядок правил для корректной загрузки видео.
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -105,32 +105,42 @@ DOMAIN-SUFFIX,stel.com
 DOMAIN-SUFFIX,mbrx.app
 
 # =============================================
-# 1b. Telegram IP-CIDR (КРИТИЧНО для загрузки видео и больших файлов)
+# 1b. Telegram IP-CIDR (ВСЕ известные диапазоны для видео и файлов)
 # =============================================
-# Видео хранятся на разных дата-центрах (DC1, DC4, DC5). Фото часто на DC2.
-# Необходимы ВСЕ официальные подсети Telegram (ASN: AS44907, AS62041, AS59930).
+# ВАЖНО: Эти правила должны идти ПОСЛЕ доменных правил, но ДО остальных правил.
+# Включает ВСЕ известные дата-центры Telegram (DC1-DC5) и новые диапазоны.
 
-# --- IPv4 ---
-IP-CIDR,149.154.160.0/20
-IP-CIDR,149.154.164.0/22
-IP-CIDR,149.154.168.0/22
-IP-CIDR,149.154.172.0/22
-IP-CIDR,91.108.4.0/22
-IP-CIDR,91.108.8.0/22
-IP-CIDR,91.108.12.0/22
-IP-CIDR,91.108.16.0/22
-IP-CIDR,91.108.56.0/22
-IP-CIDR,91.108.208.0/22
-IP-CIDR,91.108.248.0/22
-IP-CIDR,109.239.140.0/24
-IP-CIDR,185.76.151.0/24
+# --- IPv4: Основные диапазоны Telegram ---
+IP-CIDR,149.154.160.0/20,PROXY,no-resolve
+IP-CIDR,149.154.164.0/22,PROXY,no-resolve
+IP-CIDR,149.154.168.0/22,PROXY,no-resolve
+IP-CIDR,149.154.172.0/22,PROXY,no-resolve
+
+# --- IPv4: Дополнительные диапазоны для медиа ---
+IP-CIDR,91.108.4.0/22,PROXY,no-resolve
+IP-CIDR,91.108.8.0/22,PROXY,no-resolve
+IP-CIDR,91.108.12.0/22,PROXY,no-resolve
+IP-CIDR,91.108.16.0/22,PROXY,no-resolve
+IP-CIDR,91.108.56.0/22,PROXY,no-resolve
+IP-CIDR,91.108.208.0/22,PROXY,no-resolve
+IP-CIDR,91.108.248.0/22,PROXY,no-resolve
+
+# --- IPv4: НОВЫЕ диапазоны (включая 91.105.192.0/24 со скриншота) ---
+IP-CIDR,91.105.192.0/24,PROXY,no-resolve
+IP-CIDR,91.105.193.0/24,PROXY,no-resolve
+IP-CIDR,91.105.194.0/24,PROXY,no-resolve
+IP-CIDR,91.105.195.0/24,PROXY,no-resolve
+
+# --- IPv4: Веб-клиенты и API ---
+IP-CIDR,109.239.140.0/24,PROXY,no-resolve
+IP-CIDR,185.76.151.0/24,PROXY,no-resolve
 
 # --- IPv6 ---
-IP-CIDR6,2001:b28:f23d:f001::/48
-IP-CIDR6,2001:b28:f23d:f002::/48
-IP-CIDR6,2001:b28:f23d:f003::/48
-IP-CIDR6,2001:b28:f23f:f001::/48
-IP-CIDR6,2a0a:f280::/32
+IP-CIDR6,2001:b28:f23d:f001::/48,PROXY,no-resolve
+IP-CIDR6,2001:b28:f23d:f002::/48,PROXY,no-resolve
+IP-CIDR6,2001:b28:f23d:f003::/48,PROXY,no-resolve
+IP-CIDR6,2001:b28:f23f:f001::/48,PROXY,no-resolve
+IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
 
 # =============================================
 # 2. Видео-платформы и стриминг (обычные)
