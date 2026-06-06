@@ -1,6 +1,6 @@
 # NAME: Proxy list - Разделённый по категориям
-# UPDATED: 2026-05-26
-# CHANGES: Добавлены домены для ChatGPT (загрузка файлов, CDN, auth) и Telegram (emoji, стикеры, CDN, Web)
+# UPDATED: 2026-06-06
+# CHANGES: Добавлены домены для ChatGPT, Telegram (emoji, стикеры, CDN, Web). Исправлена загрузка медиа (фото/видео) в Telegram: добавлены cdn.telegram.org, домены экосистемы (Telegraph, Fragment) и IP-CIDR дата-центров.
 
 # =============================================
 # 0. Инструменты проверки IP и утечек (для теста прокси)
@@ -45,18 +45,24 @@ DOMAIN-SUFFIX,bumbcdn.com
 DOMAIN-SUFFIX,badoo.app
 
 # =============================================
-# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web)
+# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web и МЕДИА)
 # =============================================
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,cdn.telegram.org
 DOMAIN,cdn1.telegram-cdn.org
 DOMAIN,cdn2.telegram-cdn.org
 DOMAIN,cdn3.telegram-cdn.org
 DOMAIN,cdn4.telegram-cdn.org
 DOMAIN,cdn5.telegram-cdn.org
+DOMAIN,cdn1.telegram.org
+DOMAIN,cdn2.telegram.org
+DOMAIN,cdn3.telegram.org
+DOMAIN,cdn4.telegram.org
+DOMAIN,cdn5.telegram.org
 DOMAIN,web.telegram.org
 DOMAIN,webz.telegram.org
 DOMAIN,webk.telegram.org
@@ -72,6 +78,45 @@ DOMAIN,venus.web.telegram.org
 DOMAIN,aurora.web.telegram.org
 DOMAIN,flora.web.telegram.org
 DOMAIN-SUFFIX,telesco.pe
+
+# --- Связанные сервисы (Telegraph, Fragment, виджеты и экосистема) ---
+DOMAIN-SUFFIX,graph.org
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,fragment.com
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,telegram.dog
+DOMAIN-SUFFIX,tg.dev
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,contest.com
+DOMAIN-SUFFIX,quiz.directory
+DOMAIN-SUFFIX,usercontent.dev
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,telegramdownload.com
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,mbrx.app
+
+# =============================================
+# 1b. Telegram IP-CIDR (КРИТИЧНО для загрузки медиа, если домены не помогают)
+# =============================================
+# Фото и видео часто грузятся напрямую по IP дата-центров Telegram, минуя домены.
+IP-CIDR,91.108.4.0/22
+IP-CIDR,91.108.8.0/22
+IP-CIDR,91.108.12.0/22
+IP-CIDR,91.108.16.0/22
+IP-CIDR,91.108.56.0/22
+IP-CIDR,91.108.208.0/22
+IP-CIDR,91.108.248.0/22
+IP-CIDR,109.239.140.0/24
+IP-CIDR,149.154.160.0/20
+IP-CIDR,185.76.151.0/24
+IP-CIDR6,2001:b28:f23d:f001::/48
+IP-CIDR6,2001:b28:f23d:f002::/48
+IP-CIDR6,2001:b28:f23d:f003::/48
+IP-CIDR6,2001:b28:f23f:f001::/48
+IP-CIDR6,2a0a:f280::/32
 
 # =============================================
 # 2. Видео-платформы и стриминг (обычные)
@@ -373,6 +418,8 @@ DOMAIN-KEYWORD,epicgames
 DOMAIN-KEYWORD,fortnite
 DOMAIN-KEYWORD,unrealengine
 DOMAIN-KEYWORD,telegram
+DOMAIN-KEYWORD,telegra
+DOMAIN-KEYWORD,fragment
 DOMAIN-KEYWORD,workos
 DOMAIN-KEYWORD,statsig
 DOMAIN-KEYWORD,intercom
