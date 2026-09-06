@@ -147,6 +147,7 @@ IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
 # =============================================
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
+DOMAIN-SUFFIX,vimeocdn.com
 
 # =============================================
 # 3. Музыкальные сервисы (заблокированные или ушедшие из РФ)
@@ -157,7 +158,7 @@ DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,deezer.com
-DOMAIN-SUFFIX,dzcdn.net
+DOMAIN-SUFFIX,webtor.io
 
 # =============================================
 # 4. Торрент-трекеры (в реестре РКН)
