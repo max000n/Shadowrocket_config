@@ -307,6 +307,8 @@ DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
 
+DOMAIN-SUFFIX,agentmail.to
+
 # =============================================
 # 11. Технологии и разработка (заблокированные или ограниченные)
 # =============================================
