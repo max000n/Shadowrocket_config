@@ -1,172 +1,29 @@
-# NAME: Proxy list - Разделённый по категориям
-# UPDATED: 2026-06-06
-# CHANGES: Добавлены ВСЕ известные IP-диапазоны Telegram (включая 91.105.192.0/24), исправлен порядок правил для корректной загрузки видео.
-
-# =============================================
-# 0. Инструменты проверки IP и утечек (для теста прокси)
-# =============================================
-DOMAIN-SUFFIX,ifconfig.me
-DOMAIN-SUFFIX,ipinfo.io
-DOMAIN-SUFFIX,browserleaks.com
-DOMAIN-SUFFIX,maxmind.com
-DOMAIN-SUFFIX,2ip.ru
-
-# =============================================
-# 1. Социальные сети и мессенджеры (заблокированные РКН)
-# =============================================
-DOMAIN-SUFFIX,instagram.com
-DOMAIN-SUFFIX,cdninstagram.com
-DOMAIN-SUFFIX,igcdn.com
-DOMAIN-SUFFIX,facebook.com
-DOMAIN-SUFFIX,connect.facebook.net
-DOMAIN-SUFFIX,graph.facebook.com
-DOMAIN-SUFFIX,gateway.facebook.com
-DOMAIN-SUFFIX,edge-chat.facebook.com
-DOMAIN-SUFFIX,l.facebook.com
-DOMAIN-SUFFIX,fb.com
-DOMAIN-SUFFIX,fb.me
-DOMAIN-SUFFIX,fbsbx.com
-DOMAIN-SUFFIX,cdnfbsbx.com
-DOMAIN-SUFFIX,f.vision
-DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-SUFFIX,cdnfacebook.com
-DOMAIN-SUFFIX,fburl.com
-DOMAIN-SUFFIX,twitter.com
-DOMAIN-SUFFIX,t.co
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,x.com
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,redditmedia.com
-DOMAIN-SUFFIX,redd.it
-DOMAIN-SUFFIX,tumblr.com
-DOMAIN-SUFFIX,badoo.com
-DOMAIN-SUFFIX,badoocdn.com
-DOMAIN-SUFFIX,bumbcdn.com
-DOMAIN-SUFFIX,badoo.app
-
-# =============================================
-# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web и МЕДИА/ВИДЕО)
-# =============================================
-# --- Основные домены и мессенджеры ---
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tg.dev
-DOMAIN-SUFFIX,tx.me
-DOMAIN-SUFFIX,telegram.dog
-DOMAIN-SUFFIX,telegram.space
-DOMAIN-SUFFIX,telegramdownload.com
-DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,telega.one
-DOMAIN-SUFFIX,nicegram.app
-DOMAIN-SUFFIX,imem.app
-DOMAIN-SUFFIX,swiftgram.app
-DOMAIN-SUFFIX,iturrit.com
-DOMAIN-SUFFIX,walletbot.me
-DOMAIN-SUFFIX,telegram.tips
-DOMAIN-SUFFIX,telegram.ai
-DOMAIN-SUFFIX,telegram.asia
-DOMAIN-SUFFIX,telegram.biz
-DOMAIN-SUFFIX,telegram.cloud
-DOMAIN-SUFFIX,telegram.cn
-DOMAIN-SUFFIX,telegram.co
-DOMAIN-SUFFIX,telegram.com
-DOMAIN-SUFFIX,telegram.de
-DOMAIN-SUFFIX,telegram.dev
-DOMAIN-SUFFIX,telegram.eu
-DOMAIN-SUFFIX,telegram.fr
-DOMAIN-SUFFIX,telegram.host
-
-# --- CDN и медиа-контент ---
-DOMAIN-SUFFIX,cdn-telegram.org
-DOMAIN-SUFFIX,telegram-cdn.org
-DOMAIN-SUFFIX,telegram-cdn.net
-DOMAIN-SUFFIX,telesco.pe
-DOMAIN-SUFFIX,telegram.xyz
-DOMAIN-SUFFIX,teleg.xyz
-
-# --- Веб-клиенты и API ---
-DOMAIN,web.telegram.org
-DOMAIN,webz.telegram.org
-DOMAIN,webk.telegram.org
-DOMAIN,a.telegram.org
-DOMAIN,k.telegram.org
-DOMAIN,z.telegram.org
-DOMAIN,api.telegram.org
-DOMAIN,core.telegram.org
-DOMAIN,my.telegram.org
-DOMAIN,vesta.web.telegram.org
-DOMAIN,pluto.web.telegram.org
-DOMAIN,venus.web.telegram.org
-DOMAIN,aurora.web.telegram.org
-DOMAIN,flora.web.telegram.org
-DOMAIN,desktop.telegram.org
-DOMAIN,macos.telegram.org
-DOMAIN,events-gateway.ncdev.site
-
-# --- API сторонних клиентов ---
-DOMAIN,api.imem.app
-DOMAIN,api.swiftgram.app
-DOMAIN,api.mixpanel.com
-
-# --- Связанные сервисы (Telegraph, Fragment, виджеты и экосистема) ---
-DOMAIN-SUFFIX,graph.org
-DOMAIN-SUFFIX,telegra.ph
-DOMAIN-SUFFIX,legra.ph
-DOMAIN-SUFFIX,fragment.com
-DOMAIN-SUFFIX,comments.app
-DOMAIN-SUFFIX,contest.com
-DOMAIN-SUFFIX,quiz.directory
-DOMAIN-SUFFIX,usercontent.dev
-DOMAIN-SUFFIX,stel.com
-DOMAIN-SUFFIX,mbrx.app
-DOMAIN-SUFFIX,tg.org
-
-# =============================================
-# 1b. Telegram IP-CIDR (ВСЕ известные диапазоны для видео и файлов)
-# =============================================
-# ВАЖНО: Эти правила должны идти ПОСЛЕ доменных правил, но ДО остальных правил.
-
-# --- IPv4: Основные и дополнительные диапазоны (AS62041) ---
-IP-CIDR,91.108.4.0/22,PROXY,no-resolve
-IP-CIDR,91.108.8.0/22,PROXY,no-resolve
-IP-CIDR,91.108.12.0/22,PROXY,no-resolve
-IP-CIDR,91.108.16.0/22,PROXY,no-resolve
+OXY,no-resolve
 IP-CIDR,91.108.20.0/22,PROXY,no-resolve
 IP-CIDR,91.108.56.0/22,PROXY,no-resolve
 IP-CIDR,149.154.160.0/20,PROXY,no-resolve
+IP-CIDR,91.105.192.0/23,PROXY,no-resolve
+IP-CIDR,185.76.151.0/24,PROXY,no-resolve
+
+# --- IPv4: дополнительные диапазоны из актуальных Telegram-правил ---
+IP-CIDR,5.28.192.0/18,PROXY,no-resolve
+IP-CIDR,194.221.250.50/32,PROXY,no-resolve
 IP-CIDR,95.161.64.0/20,PROXY,no-resolve
 IP-CIDR,109.239.140.0/24,PROXY,no-resolve
-IP-CIDR,185.76.151.0/24,PROXY,no-resolve
-IP-CIDR,139.59.210.98/32,PROXY,no-resolve
-IP-CIDR,5.28.195.80/32,PROXY,no-resolve
-IP-CIDR,95.161.76.101/32,PROXY,no-resolve
 
-# --- IPv4: Новые и специальные диапазоны (CDN, веб-клиенты) ---
-IP-CIDR,91.105.192.0/23,PROXY,no-resolve
-IP-CIDR,91.108.6.0/23,PROXY,no-resolve
-IP-CIDR,91.108.10.0/23,PROXY,no-resolve
-IP-CIDR,91.108.57.0/24,PROXY,no-resolve
-
-# --- IP-ASN: Маршрутизация по автономным системам Telegram ---
+# --- IP-ASN: автономные системы Telegram ---
 IP-ASN,62041,PROXY,no-resolve
 IP-ASN,62014,PROXY,no-resolve
 IP-ASN,59930,PROXY,no-resolve
 IP-ASN,44907,PROXY,no-resolve
 IP-ASN,211157,PROXY,no-resolve
 
-# --- IPv6: Полный набор ---
+# --- IPv6: официальные диапазоны Telegram ---
 IP-CIDR6,2001:67c:4e8::/48,PROXY,no-resolve
 IP-CIDR6,2001:b28:f23c::/48,PROXY,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,PROXY,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,PROXY,no-resolve
 IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
-IP-CIDR6,2a0a:f280:203::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23d:f001::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23d:f002::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23d:f003::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23f:f001::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23f:f005::/48,PROXY,no-resolve
 
 # =============================================
 # 2. Видео-платформы и стриминг (обычные)
