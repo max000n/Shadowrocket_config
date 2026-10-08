@@ -1,4 +1,120 @@
-OXY,no-resolve
+# NAME: Proxy list - Разделённый по категориям
+# UPDATED: 2026-10-09
+# CHANGES: Обновлён и проверен блок Telegram: актуальные домены, официальные IP/CIDR, ASN и IPv6; удалены устаревшие/сомнительные диапазоны и дубли.
+
+# =============================================
+# 0. Инструменты проверки IP и утечек (для теста прокси)
+# =============================================
+DOMAIN-SUFFIX,ifconfig.me
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,browserleaks.com
+DOMAIN-SUFFIX,maxmind.com
+DOMAIN-SUFFIX,2ip.ru
+
+# =============================================
+# 1. Социальные сети и мессенджеры (заблокированные РКН)
+# =============================================
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,igcdn.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,connect.facebook.net
+DOMAIN-SUFFIX,graph.facebook.com
+DOMAIN-SUFFIX,gateway.facebook.com
+DOMAIN-SUFFIX,edge-chat.facebook.com
+DOMAIN-SUFFIX,l.facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,cdnfbsbx.com
+DOMAIN-SUFFIX,f.vision
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,cdnfacebook.com
+DOMAIN-SUFFIX,fburl.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,tumblr.com
+DOMAIN-SUFFIX,badoo.com
+DOMAIN-SUFFIX,badoocdn.com
+DOMAIN-SUFFIX,bumbcdn.com
+DOMAIN-SUFFIX,badoo.app
+
+# =============================================
+# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web и МЕДИА/ВИДЕО)
+# =============================================
+# --- Основные домены и клиенты ---
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,tg.dev
+DOMAIN-SUFFIX,tx.me
+DOMAIN-SUFFIX,telegram.dog
+DOMAIN-SUFFIX,telegram.space
+DOMAIN-SUFFIX,telegramdownload.com
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telega.one
+DOMAIN-SUFFIX,nicegram.app
+DOMAIN-SUFFIX,imem.app
+DOMAIN-SUFFIX,swiftgram.app
+DOMAIN-SUFFIX,iturrit.com
+DOMAIN-SUFFIX,walletbot.me
+
+# --- CDN и медиа-контент ---
+DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,telesco.pe
+
+# --- Веб-клиенты и API ---
+DOMAIN,web.telegram.org
+DOMAIN,webz.telegram.org
+DOMAIN,webk.telegram.org
+DOMAIN,a.telegram.org
+DOMAIN,k.telegram.org
+DOMAIN,z.telegram.org
+DOMAIN,api.telegram.org
+DOMAIN,core.telegram.org
+DOMAIN,my.telegram.org
+DOMAIN,vesta.web.telegram.org
+DOMAIN,pluto.web.telegram.org
+DOMAIN,venus.web.telegram.org
+DOMAIN,aurora.web.telegram.org
+DOMAIN,flora.web.telegram.org
+DOMAIN,desktop.telegram.org
+DOMAIN,macos.telegram.org
+
+# --- API сторонних клиентов ---
+DOMAIN,api.imem.app
+DOMAIN,api.swiftgram.app
+DOMAIN,api.mixpanel.com
+DOMAIN,events-gateway.ncdev.site
+
+# --- Связанные сервисы и экосистема ---
+DOMAIN-SUFFIX,graph.org
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,fragment.com
+DOMAIN-SUFFIX,comments.app
+DOMAIN-SUFFIX,contest.com
+DOMAIN-SUFFIX,quiz.directory
+DOMAIN-SUFFIX,usercontent.dev
+DOMAIN-SUFFIX,stel.com
+DOMAIN-SUFFIX,mbrx.app
+
+# =============================================
+# 1b. Telegram IP-CIDR (проверенные диапазоны для видео и файлов)
+# =============================================
+# ВАЖНО: Эти правила должны идти ПОСЛЕ доменных правил, но ДО остальных правил.
+
+# --- IPv4: официальные диапазоны Telegram ---
+IP-CIDR,91.108.4.0/22,PROXY,no-resolve
+IP-CIDR,91.108.8.0/22,PROXY,no-resolve
+IP-CIDR,91.108.12.0/22,PROXY,no-resolve
+IP-CIDR,91.108.16.0/22,PROXY,no-resolve
 IP-CIDR,91.108.20.0/22,PROXY,no-resolve
 IP-CIDR,91.108.56.0/22,PROXY,no-resolve
 IP-CIDR,149.154.160.0/20,PROXY,no-resolve
