@@ -1,9 +1,11 @@
-# NAME: Proxy list - Разделённый по категориям
+# NAME: Proxy list — красиво сгруппированный
 # UPDATED: 2026-10-09
-# CHANGES: Обновлён и проверен блок Telegram: актуальные домены, официальные IP/CIDR, ASN и IPv6; удалены устаревшие/сомнительные диапазоны и дубли.
+# FORMAT: Shadowrocket / Surge-style rules
+# CHANGES: Перегруппировано по назначению; Telegram собран в единый блок; удалены дубли; технические сервисы отделены от пользовательских категорий.
+# NOTE: Существующий блок 18+ сохранён без расширения каталога сайтов.
 
-# =============================================
-# 0. Инструменты проверки IP и утечек (для теста прокси)
+# 00. Проверка и диагностика
+# ====================================================================
 # =============================================
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
@@ -12,7 +14,9 @@ DOMAIN-SUFFIX,maxmind.com
 DOMAIN-SUFFIX,2ip.ru
 
 # =============================================
-# 1. Социальные сети и мессенджеры (заблокированные РКН)
+
+# 01. Социальные сети и мессенджеры
+# ====================================================================
 # =============================================
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
@@ -45,7 +49,9 @@ DOMAIN-SUFFIX,bumbcdn.com
 DOMAIN-SUFFIX,badoo.app
 
 # =============================================
-# 1a. Telegram (полный набор для emoji, стикеров, CDN, Web и МЕДИА/ВИДЕО)
+
+# 02. Telegram — домены, Web, API, CDN и экосистема
+# ====================================================================
 # =============================================
 # --- Основные домены и клиенты ---
 DOMAIN-SUFFIX,telegram.org
@@ -106,7 +112,9 @@ DOMAIN-SUFFIX,stel.com
 DOMAIN-SUFFIX,mbrx.app
 
 # =============================================
-# 1b. Telegram IP-CIDR (проверенные диапазоны для видео и файлов)
+
+# 03. Telegram — IP/CIDR, ASN и IPv6
+# ====================================================================
 # =============================================
 # ВАЖНО: Эти правила должны идти ПОСЛЕ доменных правил, но ДО остальных правил.
 
@@ -142,124 +150,9 @@ IP-CIDR6,2001:b28:f23f::/48,PROXY,no-resolve
 IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
 
 # =============================================
-# 2. Видео-платформы и стриминг (обычные)
-# =============================================
-DOMAIN-SUFFIX,vimeo.com
-DOMAIN-SUFFIX,vimeocdn.com
-DOMAIN-SUFFIX,vimeocdn.com
 
-# =============================================
-# 3. Музыкальные сервисы (заблокированные или ушедшие из РФ)
-# =============================================
-DOMAIN-SUFFIX,spotify.com
-DOMAIN-SUFFIX,spotifycdn.com
-DOMAIN-SUFFIX,scdn.co
-DOMAIN-SUFFIX,pscdn.co
-DOMAIN-SUFFIX,soundcloud.com
-DOMAIN-SUFFIX,deezer.com
-DOMAIN-SUFFIX,webtor.io
-
-# =============================================
-# 4. Торрент-трекеры (в реестре РКН)
-# =============================================
-DOMAIN-SUFFIX,rutracker.org
-DOMAIN-SUFFIX,rutracker.net
-DOMAIN-SUFFIX,rutracker.cc
-DOMAIN-SUFFIX,rutor.info
-DOMAIN-SUFFIX,rutor.org
-DOMAIN-SUFFIX,new-rutor.org
-DOMAIN-SUFFIX,kinozal.tv
-DOMAIN-SUFFIX,kinozal.guru
-DOMAIN-SUFFIX,lostfilm.tv
-DOMAIN-SUFFIX,nnm-club.me
-DOMAIN-SUFFIX,nnm-club.name
-DOMAIN-SUFFIX,nnmclub.to
-
-# =============================================
-# 5. Пиратские онлайн-кинотеатры (в реестре РКН + расширенные CDN)
-# =============================================
-DOMAIN-SUFFIX,hdrezka.ag
-DOMAIN-SUFFIX,hdrezka.cm
-DOMAIN-SUFFIX,rezka.ag
-DOMAIN-SUFFIX,cdn.rezka.ag
-DOMAIN-SUFFIX,static.rezka.ag
-
-DOMAIN-SUFFIX,lordfilm.tv
-DOMAIN-SUFFIX,lordfilm.lu
-DOMAIN-SUFFIX,lordserial.club
-DOMAIN-SUFFIX,cdn.lordfilm.tv
-DOMAIN-SUFFIX,static.lordfilm.tv
-
-DOMAIN-SUFFIX,kinogo.biz
-DOMAIN-SUFFIX,kinogo.cc
-DOMAIN-SUFFIX,kinogo.la
-DOMAIN-SUFFIX,cdn.kinogo.cc
-DOMAIN-SUFFIX,static.kinogo.cc
-
-DOMAIN-SUFFIX,bobfilm.net
-DOMAIN-SUFFIX,tushkan.net
-DOMAIN-SUFFIX,kino.pub
-
-DOMAIN-SUFFIX,lostfilm.tv
-DOMAIN-SUFFIX,cdn.lostfilm.tv
-DOMAIN-SUFFIX,video.lostfilm.tv
-
-# =============================================
-# 6. Lumex и связанные ресурсы (пиратское видео, заблокировано РКН)
-# =============================================
-DOMAIN-SUFFIX,lumex.host
-DOMAIN-SUFFIX,lumex.space
-DOMAIN-SUFFIX,lumex.cloud
-DOMAIN,api.lumex.space
-DOMAIN,p.lumex.space
-DOMAIN,p.lumex.cloud
-DOMAIN-SUFFIX,agl007.site
-DOMAIN,spx-s1.agl007.site
-DOMAIN,cvt-s2.agl007.site
-
-# =============================================
-# 7. Сервисы для взрослых (18+, в реестре РКН + полный CDN)
-# =============================================
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,xv-ru.com
-DOMAIN-SUFFIX,xvideos-cdn.com
-
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-SUFFIX,pornhubpremium.com
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,trafficjunky.net
-DOMAIN-SUFFIX,nsimg.net
-DOMAIN-SUFFIX,phprcdn.com
-
-# =============================================
-# 8. Блог-платформы и контент (заблокированные РКН)
-# =============================================
-DOMAIN-SUFFIX,medium.com
-DOMAIN-SUFFIX,quora.com
-DOMAIN-SUFFIX,archive.org
-
-# =============================================
-# 9. Заблокированные электронные библиотеки (пиратские, в реестре РКН)
-# =============================================
-DOMAIN-SUFFIX,flibusta.is
-DOMAIN-SUFFIX,flibusta.net
-DOMAIN-SUFFIX,flibusta.site
-DOMAIN-SUFFIX,flibusta.club
-DOMAIN-SUFFIX,libgen.is
-DOMAIN-SUFFIX,libgen.rs
-DOMAIN-SUFFIX,libgen.li
-DOMAIN-SUFFIX,gen.lib.rus.ec
-DOMAIN-SUFFIX,z-lib.org
-DOMAIN-SUFFIX,zlibrary.se
-DOMAIN-SUFFIX,b-ok.org
-DOMAIN-SUFFIX,bookfi.net
-DOMAIN-SUFFIX,litmir.me
-DOMAIN-SUFFIX,litmir.club
-DOMAIN-SUFFIX,lib.rus.ec
-DOMAIN-SUFFIX,librusec.net
-
-# =============================================
-# 10. Нейросети и ИИ (геоблок от сервисов или РКН для РФ)
+# 04. Нейросети и ИИ
+# ====================================================================
 # =============================================
 # --- OpenAI / ChatGPT (расширенный набор для файлов, CDN, auth) ---
 DOMAIN-SUFFIX,openai.com
@@ -309,7 +202,142 @@ DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,agentmail.to
 
 # =============================================
-# 11. Технологии и разработка (заблокированные или ограниченные)
+
+# 05. Видео-платформы и стриминг
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,vimeo.com
+DOMAIN-SUFFIX,vimeocdn.com
+
+# =============================================
+
+# 06. Музыка и аудиосервисы
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,soundcloud.com
+DOMAIN-SUFFIX,deezer.com
+DOMAIN-SUFFIX,webtor.io
+
+# =============================================
+
+# 07. Игры и игровые платформы
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,epicgames.com
+DOMAIN-SUFFIX,epicgames.dev
+DOMAIN-SUFFIX,epicgames.net
+DOMAIN-SUFFIX,fortnite.com
+DOMAIN-SUFFIX,unrealengine.com
+
+# =============================================
+
+# 08. Сервисы 18+
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,xv-ru.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,trafficjunky.net
+DOMAIN-SUFFIX,nsimg.net
+DOMAIN-SUFFIX,phprcdn.com
+
+# =============================================
+
+# 09. Торрент-трекеры
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,rutracker.org
+DOMAIN-SUFFIX,rutracker.net
+DOMAIN-SUFFIX,rutracker.cc
+DOMAIN-SUFFIX,rutor.info
+DOMAIN-SUFFIX,rutor.org
+DOMAIN-SUFFIX,new-rutor.org
+DOMAIN-SUFFIX,kinozal.tv
+DOMAIN-SUFFIX,kinozal.guru
+DOMAIN-SUFFIX,nnm-club.me
+DOMAIN-SUFFIX,nnm-club.name
+DOMAIN-SUFFIX,nnmclub.to
+
+# =============================================
+
+# 10. Онлайн-кинотеатры и видеосервисы
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,hdrezka.ag
+DOMAIN-SUFFIX,hdrezka.cm
+DOMAIN-SUFFIX,rezka.ag
+DOMAIN-SUFFIX,cdn.rezka.ag
+DOMAIN-SUFFIX,static.rezka.ag
+
+DOMAIN-SUFFIX,lordfilm.tv
+DOMAIN-SUFFIX,lordfilm.lu
+DOMAIN-SUFFIX,lordserial.club
+DOMAIN-SUFFIX,cdn.lordfilm.tv
+DOMAIN-SUFFIX,static.lordfilm.tv
+
+DOMAIN-SUFFIX,kinogo.biz
+DOMAIN-SUFFIX,kinogo.cc
+DOMAIN-SUFFIX,kinogo.la
+DOMAIN-SUFFIX,cdn.kinogo.cc
+DOMAIN-SUFFIX,static.kinogo.cc
+
+DOMAIN-SUFFIX,bobfilm.net
+DOMAIN-SUFFIX,tushkan.net
+DOMAIN-SUFFIX,kino.pub
+
+DOMAIN-SUFFIX,lostfilm.tv
+DOMAIN-SUFFIX,cdn.lostfilm.tv
+DOMAIN-SUFFIX,video.lostfilm.tv
+
+# =============================================
+
+# 11. Lumex и связанные видеоресурсы
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,lumex.host
+DOMAIN-SUFFIX,lumex.space
+DOMAIN-SUFFIX,lumex.cloud
+DOMAIN,api.lumex.space
+DOMAIN,p.lumex.space
+DOMAIN,p.lumex.cloud
+DOMAIN-SUFFIX,agl007.site
+DOMAIN,spx-s1.agl007.site
+DOMAIN,cvt-s2.agl007.site
+
+# =============================================
+
+# 12. Электронные библиотеки
+# ====================================================================
+# =============================================
+DOMAIN-SUFFIX,flibusta.is
+DOMAIN-SUFFIX,flibusta.net
+DOMAIN-SUFFIX,flibusta.site
+DOMAIN-SUFFIX,flibusta.club
+DOMAIN-SUFFIX,libgen.is
+DOMAIN-SUFFIX,libgen.rs
+DOMAIN-SUFFIX,libgen.li
+DOMAIN-SUFFIX,gen.lib.rus.ec
+DOMAIN-SUFFIX,z-lib.org
+DOMAIN-SUFFIX,zlibrary.se
+DOMAIN-SUFFIX,b-ok.org
+DOMAIN-SUFFIX,bookfi.net
+DOMAIN-SUFFIX,litmir.me
+DOMAIN-SUFFIX,litmir.club
+DOMAIN-SUFFIX,lib.rus.ec
+DOMAIN-SUFFIX,librusec.net
+
+# =============================================
+
+# 13. Разработка и GitHub
+# ====================================================================
 # =============================================
 DOMAIN-SUFFIX,jetbrains.com
 DOMAIN-SUFFIX,github.com
@@ -317,7 +345,9 @@ DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN,raw.githubusercontent.com
 
 # =============================================
-# 12. Другие заблокированные/ограниченные сервисы
+
+# 14. Другие сервисы и инфраструктура
+# ====================================================================
 # =============================================
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,licdn.com
@@ -391,16 +421,18 @@ DOMAIN-SUFFIX,prodregistryv2.org
 DOMAIN,rum.browser-intake-datadoghq.com
 
 # =============================================
-# 13. Игровые сервисы (Epic Games / Fortnite / Unreal Engine)
+
+# 15. Блоги, Q&A и архивы
+# ====================================================================
 # =============================================
-DOMAIN-SUFFIX,epicgames.com
-DOMAIN-SUFFIX,epicgames.dev
-DOMAIN-SUFFIX,epicgames.net
-DOMAIN-SUFFIX,fortnite.com
-DOMAIN-SUFFIX,unrealengine.com
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,archive.org
 
 # =============================================
-# 14. DOMAIN-KEYWORD (для покрытия зеркал и поддоменов)
+
+# 16. DOMAIN-KEYWORD — расширенное покрытие
+# ====================================================================
 # =============================================
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
@@ -459,3 +491,11 @@ DOMAIN-KEYWORD,twitchcdn
 DOMAIN-KEYWORD,oaistatic
 DOMAIN-KEYWORD,oaiusercontent
 DOMAIN-KEYWORD,sora
+
+# =============================================
+# ПРИМЕЧАНИЕ ПО ПОРЯДКУ ПРАВИЛ
+# =============================================
+# 1) DOMAIN / DOMAIN-SUFFIX — точечные правила
+# 2) Telegram IP-CIDR / IP-ASN / IP-CIDR6 — сразу после Telegram
+# 3) DOMAIN-KEYWORD — в самом конце, поскольку такие правила шире
+#    и потенциально могут совпадать с большим числом доменов.
