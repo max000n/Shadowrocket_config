@@ -105,8 +105,12 @@ DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,agentmail.to
-# --- Cue ---
+# --- Cue / Manus: app and service domains seen in your logs ---
 DOMAIN-SUFFIX,cue.im
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
+# Exact telemetry host visible in the logs; avoid routing all butterfly-effect.dev hosts.
+DOMAIN,sentry.prod.ops.butterfly-effect.dev
 
 # 04. Видео-платформы и стриминг
 DOMAIN-SUFFIX,vimeo.com
