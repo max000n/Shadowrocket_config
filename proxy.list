@@ -1,31 +1,23 @@
-# NAME: Proxy list — красиво сгруппированный
-# UPDATED: 2026-10-09
-# FORMAT: Shadowrocket / Surge-style rules
-# CHANGES: Перегруппировано по назначению; Telegram собран в единый блок; удалены дубли; технические сервисы отделены от пользовательских категорий.
+# Proxy list — аккуратно сгруппированный (Cue добавлен)
+# UPDATED: 2026-11-05
+# Формат: отдельный RULE-SET для Shadowrocket; политику прокси назначьте списку в настройках.
+# В строках намеренно нет действия PROXY — весь список будет привязан к прокси-группе целиком.
+# cue.im включает корневой домен и все его поддомены.
+# Убраны семантически дублирующие доменные записи и неподтверждённые дополнительные CIDR.
 
 # 00. Проверка и диагностика
-# ====================================================================
-# =============================================
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,maxmind.com
 DOMAIN-SUFFIX,2ip.ru
 
-# =============================================
-
 # 01. Социальные сети и мессенджеры
-# ====================================================================
-# =============================================
 DOMAIN-SUFFIX,instagram.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,igcdn.com
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,connect.facebook.net
-DOMAIN-SUFFIX,graph.facebook.com
-DOMAIN-SUFFIX,gateway.facebook.com
-DOMAIN-SUFFIX,edge-chat.facebook.com
-DOMAIN-SUFFIX,l.facebook.com
 DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbsbx.com
@@ -47,11 +39,7 @@ DOMAIN-SUFFIX,badoocdn.com
 DOMAIN-SUFFIX,bumbcdn.com
 DOMAIN-SUFFIX,badoo.app
 
-# =============================================
-
 # 02. Telegram — домены, Web, API, CDN и экосистема
-# ====================================================================
-# =============================================
 # --- Основные домены и клиенты ---
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telegram.me
@@ -68,36 +56,14 @@ DOMAIN-SUFFIX,imem.app
 DOMAIN-SUFFIX,swiftgram.app
 DOMAIN-SUFFIX,iturrit.com
 DOMAIN-SUFFIX,walletbot.me
-
 # --- CDN и медиа-контент ---
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,telesco.pe
-
 # --- Веб-клиенты и API ---
-DOMAIN,web.telegram.org
-DOMAIN,webz.telegram.org
-DOMAIN,webk.telegram.org
-DOMAIN,a.telegram.org
-DOMAIN,k.telegram.org
-DOMAIN,z.telegram.org
-DOMAIN,api.telegram.org
-DOMAIN,core.telegram.org
-DOMAIN,my.telegram.org
-DOMAIN,vesta.web.telegram.org
-DOMAIN,pluto.web.telegram.org
-DOMAIN,venus.web.telegram.org
-DOMAIN,aurora.web.telegram.org
-DOMAIN,flora.web.telegram.org
-DOMAIN,desktop.telegram.org
-DOMAIN,macos.telegram.org
-
 # --- API сторонних клиентов ---
-DOMAIN,api.imem.app
-DOMAIN,api.swiftgram.app
 DOMAIN,api.mixpanel.com
 DOMAIN,events-gateway.ncdev.site
-
 # --- Связанные сервисы и экосистема ---
 DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,telegra.ph
@@ -110,78 +76,20 @@ DOMAIN-SUFFIX,usercontent.dev
 DOMAIN-SUFFIX,stel.com
 DOMAIN-SUFFIX,mbrx.app
 
-# =============================================
-
-# 03. Telegram — IP/CIDR, ASN и IPv6
-# ====================================================================
-# =============================================
-# ВАЖНО: Эти правила должны идти ПОСЛЕ доменных правил, но ДО остальных правил.
-
-# --- IPv4: официальные диапазоны Telegram ---
-IP-CIDR,91.108.4.0/22,PROXY,no-resolve
-IP-CIDR,91.108.8.0/22,PROXY,no-resolve
-IP-CIDR,91.108.12.0/22,PROXY,no-resolve
-IP-CIDR,91.108.16.0/22,PROXY,no-resolve
-IP-CIDR,91.108.20.0/22,PROXY,no-resolve
-IP-CIDR,91.108.56.0/22,PROXY,no-resolve
-IP-CIDR,149.154.160.0/20,PROXY,no-resolve
-IP-CIDR,91.105.192.0/23,PROXY,no-resolve
-IP-CIDR,185.76.151.0/24,PROXY,no-resolve
-
-# --- IPv4: дополнительные диапазоны из актуальных Telegram-правил ---
-IP-CIDR,5.28.192.0/18,PROXY,no-resolve
-IP-CIDR,194.221.250.50/32,PROXY,no-resolve
-IP-CIDR,95.161.64.0/20,PROXY,no-resolve
-IP-CIDR,109.239.140.0/24,PROXY,no-resolve
-
-# --- IP-ASN: автономные системы Telegram ---
-IP-ASN,62041,PROXY,no-resolve
-IP-ASN,62014,PROXY,no-resolve
-IP-ASN,59930,PROXY,no-resolve
-IP-ASN,44907,PROXY,no-resolve
-IP-ASN,211157,PROXY,no-resolve
-
-# --- IPv6: официальные диапазоны Telegram ---
-IP-CIDR6,2001:67c:4e8::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23c::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,PROXY,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,PROXY,no-resolve
-IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
-
-# =============================================
-
-# 04. Нейросети и ИИ
-# ====================================================================
-# =============================================
+# 03. Нейросети и ИИ
 # --- OpenAI / ChatGPT (расширенный набор для файлов, CDN, auth) ---
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,sora.com
-DOMAIN,auth0.openai.com
-DOMAIN,auth.openai.com
-DOMAIN,platform.openai.com
-DOMAIN,api.openai.com
-DOMAIN,status.openai.com
-DOMAIN,chat.openai.com
-DOMAIN,android.chat.openai.com
-DOMAIN,ios.chat.openai.com
-DOMAIN,desktop.chat.openai.com
-DOMAIN,tcr9i.chat.openai.com
-DOMAIN,files.oaiusercontent.com
 DOMAIN,files.oasisusercontent.com
 DOMAIN,cdn.openaimerge.com
-
 # --- Anthropic / Claude ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
-DOMAIN,console.anthropic.com
-
 # --- Midjourney ---
 DOMAIN-SUFFIX,midjourney.com
-DOMAIN,cdn.midjourney.com
-
 # --- Google AI ---
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
@@ -193,26 +101,18 @@ DOMAIN-SUFFIX,usercontent.google.com
 DOMAIN-SUFFIX,ai.google
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,generativeai.google
-
 # --- xAI ---
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,grok.com
-
 DOMAIN-SUFFIX,agentmail.to
+# --- Cue ---
+DOMAIN-SUFFIX,cue.im
 
-# =============================================
-
-# 05. Видео-платформы и стриминг
-# ====================================================================
-# =============================================
+# 04. Видео-платформы и стриминг
 DOMAIN-SUFFIX,vimeo.com
 DOMAIN-SUFFIX,vimeocdn.com
 
-# =============================================
-
-# 06. Музыка и аудиосервисы
-# ====================================================================
-# =============================================
+# 05. Музыка и аудиосервисы
 DOMAIN-SUFFIX,spotify.com
 DOMAIN-SUFFIX,spotifycdn.com
 DOMAIN-SUFFIX,scdn.co
@@ -221,26 +121,17 @@ DOMAIN-SUFFIX,soundcloud.com
 DOMAIN-SUFFIX,deezer.com
 DOMAIN-SUFFIX,webtor.io
 
-# =============================================
-
-# 07. Игры и игровые платформы
-# ====================================================================
-# =============================================
+# 06. Игры и игровые платформы
 DOMAIN-SUFFIX,epicgames.com
 DOMAIN-SUFFIX,epicgames.dev
 DOMAIN-SUFFIX,epicgames.net
 DOMAIN-SUFFIX,fortnite.com
 DOMAIN-SUFFIX,unrealengine.com
 
-# =============================================
-
-# 08. 18+ / Adult — существующие правила
-# ====================================================================
-# =============================================
+# 07. 18+ / Adult — существующие правила
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xv-ru.com
 DOMAIN-SUFFIX,xvideos-cdn.com
-
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
 DOMAIN-SUFFIX,phncdn.com
@@ -248,11 +139,16 @@ DOMAIN-SUFFIX,trafficjunky.net
 DOMAIN-SUFFIX,nsimg.net
 DOMAIN-SUFFIX,phprcdn.com
 
-# =============================================
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,youporn.com
+DOMAIN-SUFFIX,eporner.com
+DOMAIN-SUFFIX,beeg.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,tube8.com
 
-# 09. Торрент-трекеры
-# ====================================================================
-# =============================================
+# 08. Торрент-трекеры
 DOMAIN-SUFFIX,rutracker.org
 DOMAIN-SUFFIX,rutracker.net
 DOMAIN-SUFFIX,rutracker.cc
@@ -265,57 +161,28 @@ DOMAIN-SUFFIX,nnm-club.me
 DOMAIN-SUFFIX,nnm-club.name
 DOMAIN-SUFFIX,nnmclub.to
 
-# =============================================
-
-# 10. Онлайн-кинотеатры и видеосервисы
-# ====================================================================
-# =============================================
+# 09. Онлайн-кинотеатры и видеосервисы
 DOMAIN-SUFFIX,hdrezka.ag
 DOMAIN-SUFFIX,hdrezka.cm
 DOMAIN-SUFFIX,rezka.ag
-DOMAIN-SUFFIX,cdn.rezka.ag
-DOMAIN-SUFFIX,static.rezka.ag
-
 DOMAIN-SUFFIX,lordfilm.tv
 DOMAIN-SUFFIX,lordfilm.lu
 DOMAIN-SUFFIX,lordserial.club
-DOMAIN-SUFFIX,cdn.lordfilm.tv
-DOMAIN-SUFFIX,static.lordfilm.tv
-
 DOMAIN-SUFFIX,kinogo.biz
 DOMAIN-SUFFIX,kinogo.cc
 DOMAIN-SUFFIX,kinogo.la
-DOMAIN-SUFFIX,cdn.kinogo.cc
-DOMAIN-SUFFIX,static.kinogo.cc
-
 DOMAIN-SUFFIX,bobfilm.net
 DOMAIN-SUFFIX,tushkan.net
 DOMAIN-SUFFIX,kino.pub
-
 DOMAIN-SUFFIX,lostfilm.tv
-DOMAIN-SUFFIX,cdn.lostfilm.tv
-DOMAIN-SUFFIX,video.lostfilm.tv
 
-# =============================================
-
-# 11. Lumex и связанные видеоресурсы
-# ====================================================================
-# =============================================
+# 10. Lumex и связанные видеоресурсы
 DOMAIN-SUFFIX,lumex.host
 DOMAIN-SUFFIX,lumex.space
 DOMAIN-SUFFIX,lumex.cloud
-DOMAIN,api.lumex.space
-DOMAIN,p.lumex.space
-DOMAIN,p.lumex.cloud
 DOMAIN-SUFFIX,agl007.site
-DOMAIN,spx-s1.agl007.site
-DOMAIN,cvt-s2.agl007.site
 
-# =============================================
-
-# 12. Электронные библиотеки
-# ====================================================================
-# =============================================
+# 11. Электронные библиотеки
 DOMAIN-SUFFIX,flibusta.is
 DOMAIN-SUFFIX,flibusta.net
 DOMAIN-SUFFIX,flibusta.site
@@ -333,21 +200,12 @@ DOMAIN-SUFFIX,litmir.club
 DOMAIN-SUFFIX,lib.rus.ec
 DOMAIN-SUFFIX,librusec.net
 
-# =============================================
-
-# 13. Разработка и GitHub
-# ====================================================================
-# =============================================
+# 12. Разработка и GitHub
 DOMAIN-SUFFIX,jetbrains.com
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN,raw.githubusercontent.com
 
-# =============================================
-
-# 14. Другие сервисы и инфраструктура
-# ====================================================================
-# =============================================
+# 13. Другие сервисы и инфраструктура
 DOMAIN-SUFFIX,canva.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,linkedin.com
@@ -357,83 +215,80 @@ DOMAIN-SUFFIX,netflix.com
 DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,skladchina.biz
 DOMAIN-SUFFIX,lostpix.com
-
 # --- TikTok ---
 DOMAIN-SUFFIX,tiktok.com
 DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,musical.ly
-
 # --- Twitch ---
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
 DOMAIN-SUFFIX,jtvnw.net
 DOMAIN-SUFFIX,ttvnw.net
-
 # --- Kahoot ---
 DOMAIN-SUFFIX,kahoot.it
 DOMAIN-SUFFIX,kahoot.com
-
 # --- Cloudflare (CAPTCHA, CDN для многих сервисов) ---
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,cloudflareinsights.com
-DOMAIN,challenges.cloudflare.com
-
 # --- Stripe (платежи, используется OpenAI и др.) ---
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,stripe.network
-DOMAIN,js.stripe.com
-
 # --- Intercom (поддержка, используется OpenAI) ---
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,intercom.com
-DOMAIN,js.intercomcdn.com
-
 # --- Sentry (отслеживание ошибок) ---
 DOMAIN-SUFFIX,sentry.io
-DOMAIN,o207216.ingest.sentry.io
-DOMAIN,o33249.ingest.sentry.io
-
 # --- Statsig (фича-флаги, используется OpenAI) ---
 DOMAIN-SUFFIX,statsig.com
 DOMAIN-SUFFIX,statsigapi.net
-DOMAIN,events.statsigapi.net
-
 # --- WorkOS (аутентификация, используется OpenAI) ---
 DOMAIN-SUFFIX,workos.com
 DOMAIN-SUFFIX,workoscdn.com
-DOMAIN,cdn.workos.com
-DOMAIN,setup.workos.com
-DOMAIN,forwarder.workos.com
-DOMAIN,images.workoscdn.com
 DOMAIN,workos.imgix.net
-DOMAIN,setup.auth.openai.com
-
 # --- SendGrid (email, используется OpenAI) ---
 DOMAIN-SUFFIX,sendgrid.net
-
 # --- Feature Gates / Prod Registry ---
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,featureassets.org
 DOMAIN-SUFFIX,prodregistryv2.org
-
 # --- Datadog (мониторинг) ---
 DOMAIN,rum.browser-intake-datadoghq.com
 
-# =============================================
-
-# 15. Блоги, Q&A и архивы
-# ====================================================================
-# =============================================
+# 14. Блоги, Q&A и архивы
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,archive.org
 
-# =============================================
+# 15. Telegram — IP/CIDR, ASN и IPv6
+# Размещайте после доменных категорий; перед широким DOMAIN-KEYWORD-блоком.
+# --- IPv4: официальные диапазоны Telegram ---
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/22,no-resolve
+IP-CIDR,91.108.12.0/22,no-resolve
+IP-CIDR,91.108.16.0/22,no-resolve
+IP-CIDR,91.108.20.0/22,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,91.105.192.0/23,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+# --- IPv4: дополнительные диапазоны из актуальных Telegram-правил ---
+IP-CIDR,95.161.64.0/20,no-resolve
+# --- IP-ASN: автономные системы Telegram ---
+IP-ASN,62041,no-resolve
+IP-ASN,62014,no-resolve
+IP-ASN,59930,no-resolve
+IP-ASN,44907,no-resolve
+IP-ASN,211157,no-resolve
+# --- IPv6: официальные диапазоны Telegram ---
+IP-CIDR6,2001:67c:4e8::/48,no-resolve
+IP-CIDR6,2001:b28:f23c::/48,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,no-resolve
+IP-CIDR6,2a0a:f280::/32,no-resolve
 
 # 16. DOMAIN-KEYWORD — расширенное покрытие
-# ====================================================================
-# =============================================
+# Проверяет подстроку: посторонние hostname тоже могут совпасть и пойти через PROXY.
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
 DOMAIN-KEYWORD,kahoot
@@ -491,17 +346,10 @@ DOMAIN-KEYWORD,twitchcdn
 DOMAIN-KEYWORD,oaistatic
 DOMAIN-KEYWORD,oaiusercontent
 DOMAIN-KEYWORD,sora
-# ====================================================================
 # 17. Финал — порядок и обслуживание списка
-# ====================================================================
 # Структура: точечные домены → тематические группы → IP/CIDR Telegram → KEYWORD.
-# DOMAIN-KEYWORD оставлен в самом конце, чтобы широкие совпадения не перекрывали
-# более точные правила выше.
-#
+# DOMAIN-KEYWORD ищет подстроку в любом hostname и может совпасть с посторонними доменами;
+# проверяйте этот блок, если не хотите проксировать все такие совпадения.
 # Перед обновлением списка рекомендуется сохранить рабочую копию.
 # После добавления новых правил проверяйте фактический запрос в журнале
 # Shadowrocket и удаляйте правило, если оно оказалось слишком широким.
-#
-# ────────────────────────────────────────────────────────────────────
-# PROXY LIST • CLEAN • SORTED • READY
-# ────────────────────────────────────────────────────────────────────
